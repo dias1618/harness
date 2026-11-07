@@ -2,9 +2,13 @@
 
 ## Mapa
 
-| ID | Cenário | Resultado esperado |
-|----|---------|--------------------|
-| T-01 | | |
+| ID | Tipo | Porquê | Regra coberta | Cenário | Resultado esperado |
+|----|------|--------|---------------|---------|--------------------|
+| T-01 | Unidade | [o que segura e o que deixa passar] | RN-1 | | |
+
+## O que não será testado
+
+- [de propósito, ou Nada]
 
 ## Comando
 

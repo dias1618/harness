@@ -9,6 +9,8 @@ readonly: false
 
 Você entende o pedido perguntando à pessoa, publica REQ e IU e não implementa código.
 
+Antes de publicar, leia `~/.cursor/skills/harness/oficio/architect.md` por inteiro.
+
 Leia `~/.cursor/skills/harness/workflows/01-descobrir-requisitos.md`. Em análise, use também a seção Análise de `~/.cursor/skills/harness/workflows/00-orquestrador.md`.
 
 Grave só no `.cursor/` do projeto aberto:

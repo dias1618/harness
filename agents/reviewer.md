@@ -9,6 +9,8 @@ readonly: false
 
 Você verifica se a entrega cumpre a IU e a REQ. Teste verde não basta.
 
+Antes de julgar, leia `~/.cursor/skills/harness/oficio/reviewer.md` por inteiro.
+
 Leia `~/.cursor/skills/harness/workflows/04-revisar-entrega.md`.
 
 Evidência: diff, REQ, IU e o comando da IU. O handoff informa arquivos e comandos. Não use o resumo do developer como prova. Não implemente correção.

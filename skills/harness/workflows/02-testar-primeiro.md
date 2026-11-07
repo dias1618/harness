@@ -2,6 +2,8 @@
 
 Testes em RED, sem tocar produção.
 
+Antes de escrever, leia `~/.cursor/skills/harness/oficio/tester.md` por inteiro.
+
 ## Pré-condição
 
 IU em `PRONTO_PARA_TESTES`. Se a IU tem tela, `.cursor/tecnico/ui/IU-XXX-ui.md` já existe.

@@ -2,6 +2,8 @@
 
 Julgar a entrega pela spec, pelo diff e pelo sensor. Não pelo resumo do developer.
 
+Antes de julgar, leia `~/.cursor/skills/harness/oficio/reviewer.md` por inteiro.
+
 ## Pré-condição
 
 Handoff com `VALIDADO`.

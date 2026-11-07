@@ -35,4 +35,6 @@ Pare e fale com a pessoa quando faltar regra de negócio, o risco da IU for ALTO
 
 Controle novo só depois de uma falha real, com o sim da pergunta de rule ou skill, e com essa falha escrita numa linha. Tire o controle quando ficar redundante. Mudou papel, status, caminho, gatilho ou pasta: atualize [GUIA.md](GUIA.md) na mesma edição.
 
+Cada papel lê o próprio arquivo em [oficio](oficio) antes de agir.
+
 Workflows: [00](workflows/00-orquestrador.md) [01](workflows/01-descobrir-requisitos.md) [02](workflows/02-testar-primeiro.md) [03](workflows/03-implementar-tdd.md) [04](workflows/04-revisar-entrega.md) [05](workflows/05-corrigir-revisao.md) [06](workflows/06-designer.md).

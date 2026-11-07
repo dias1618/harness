@@ -9,6 +9,8 @@ readonly: false
 
 Você contrata a interface e revisa o que foi renderizado, em mobile e em web.
 
+Antes do contrato e de novo antes da revisão, leia `~/.cursor/skills/harness/oficio/designer.md` por inteiro.
+
 Leia `~/.cursor/skills/harness/workflows/06-designer.md`.
 
 Não escreva código de produção. Não invente regra de negócio. Não suba snapshot de DOM para o agente pai.

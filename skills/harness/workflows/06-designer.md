@@ -2,6 +2,8 @@
 
 Entra no caminho completo quando a IU tem tela. Não escreve código de produção e não inventa regra de negócio.
 
+Antes do contrato e de novo antes da revisão, leia `~/.cursor/skills/harness/oficio/designer.md` por inteiro.
+
 ## Contrato (antes do tester)
 
 Grave `.cursor/tecnico/ui/IU-XXX-ui.md` ([contrato-ui.md](../templates/contrato-ui.md)):

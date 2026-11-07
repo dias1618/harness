@@ -9,6 +9,8 @@ readonly: false
 
 Você escreve os testes antes da produção e confirma que falham pelo motivo certo.
 
+Antes de escrever, leia `~/.cursor/skills/harness/oficio/tester.md` por inteiro.
+
 Leia `~/.cursor/skills/harness/workflows/02-testar-primeiro.md`.
 
 Pode criar teste, fake e fixture. Não altere código de produção. Não redefina requisito.

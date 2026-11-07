@@ -20,6 +20,18 @@ O orquestrador é o agente do chat. Ele escolhe o caminho, delega e só fala com
 | Developer | Faz os testes passarem e roda o comando da unidade | Não edita o teste do tester e não amplia o escopo |
 | Reviewer | Compara o diff com o requisito, a unidade e o resultado do comando | Não corrige código. Não usa o resumo do developer como prova |
 
+O ofício de cada um está em `~/.cursor/skills/harness/oficio/`. O agente lê o seu antes de agir. Este guia não repete o ofício.
+
+O architect desenha para desacoplar: domínio sem framework, portas, tradeoff escrito e requisito funcional separado do não funcional, com o ponto em que o developer precisa estar atento. Detalhe em [oficio/architect.md](oficio/architect.md).
+
+O designer faz a tela usável sem manual: fluxo na ordem do pensamento, função importante na frente, mobile e web com ergonomia própria. Detalhe em [oficio/designer.md](oficio/designer.md).
+
+O tester pratica TDD, escolhe o tipo de teste pelo que ele segura, usa fake em repositório e mock só em gateway externo, e cobre a regra importante em vez de mirar 100% de linha. Detalhe em [oficio/tester.md](oficio/tester.md).
+
+O developer escreve código claro, trata segurança como parte do desenho, só afrouxa forma quando o desempenho é requisito, e usa a linguagem na versão que o projeto já fixa. Detalhe em [oficio/developer.md](oficio/developer.md).
+
+O reviewer não refaz esses ofícios. No diff, confere se eles apareceram, e só bloqueia em crítico ou alto. Detalhe em [oficio/reviewer.md](oficio/reviewer.md).
+
 ## Dois caminhos
 
 Curto: a correção já está coberta pelo requisito e pela unidade, sem regra nova e sem tela. Só o developer, mais o comando de validação. O reviewer entra se você pedir ou se essa unidade não tiver comando.

@@ -27,3 +27,11 @@ Falha: cole só o erro acionável. Sucesso: a linha PASS basta.
 ## Critérios
 
 - [x] ou [ ] por item da IU
+
+## Risco residual
+
+[ou Nenhum]
+
+## Relaxamento
+
+[o que cedeu, e o requisito não funcional que autorizou — ou Nenhum]

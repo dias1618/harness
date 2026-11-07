@@ -26,6 +26,17 @@ BLOQUEADO | PRONTO_PARA_TESTES | RED | VALIDADO | APROVADO
 
 sim | não
 
+## Limites
+
+- [porta, contexto, o que o domínio não pode conhecer]
+
+## Tradeoff
+
+- Ganha:
+- Perde:
+- Se o desempenho importa, pode relaxar:
+- Não pode relaxar:
+
 ## Critérios de aceite
 
 - [ ] [comportamento testável]

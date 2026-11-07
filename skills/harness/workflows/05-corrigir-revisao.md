@@ -2,6 +2,8 @@
 
 Corrigir só CRÍTICO e ALTO, na rodada 1 ou 2.
 
+Antes de editar, leia `~/.cursor/skills/harness/oficio/developer.md` por inteiro.
+
 ## 1. Ler o veredito
 
 Implemente apenas os itens obrigatórios do relatório de revisão e, se houver tela, do veredito visual. Ignore MÉDIO e BAIXO.

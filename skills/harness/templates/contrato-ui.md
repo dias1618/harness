@@ -1,5 +1,14 @@
 # Contrato visual — IU-XXX
 
+## Fluxo
+
+1. [passo na ordem em que a pessoa pensa]
+2.
+
+## Função na frente
+
+[A mais importante do sistema nesta tela]
+
 ## Hierarquia
 
 [O que se vê primeiro]

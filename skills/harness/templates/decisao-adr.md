@@ -14,7 +14,12 @@ PROPOSTO | ACEITO | SUBSTITUÍDO
 
 ## Consequências
 
-- [efeito]
+- Ganha:
+- Perde:
+
+## Alternativas recusadas
+
+- [opção — por que não, inclusive tecnologia ou integração]
 
 ## Referências
 

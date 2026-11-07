@@ -2,6 +2,8 @@
 
 Transformar o pedido em REQ e IU, sem inferir negócio e sem código de produção.
 
+Antes de publicar, leia `~/.cursor/skills/harness/oficio/architect.md` por inteiro.
+
 ## 1. Contexto mínimo
 
 1. `.cursor/context/projeto.md`

@@ -2,6 +2,8 @@
 
 Levar a IU de `RED` a `VALIDADO` sem alterar teste do tester.
 
+Antes de editar, leia `~/.cursor/skills/harness/oficio/developer.md` por inteiro.
+
 ## Pré-condição
 
 IU em `RED` e tester liberou. No caminho curto, a IU já está contratada e os testes existentes cobrem a correção; se não houver teste, pare e volte ao caminho completo.

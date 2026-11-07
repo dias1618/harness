@@ -8,9 +8,18 @@ RASCUNHO | APROVADO | SUBSTITUÍDO
 
 [Uma a três frases]
 
-## Regras de negócio
+## Funcional
 
-- RN-1: [enunciado testável]
+- RN-1: [o que a pessoa observa, testável]
+
+## Não funcional
+
+- [segurança, desempenho, consistência, falha ou observabilidade — ou Nenhuma]
+- Sem número inventado.
+
+## Atenção na implementação
+
+- [onde o developer precisa estar atento]
 
 ## Fora de escopo
 
