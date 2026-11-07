@@ -1,0 +1,17 @@
+---
+description: #harness escolhe caminho curto ou completo; não substitui orquestrador do projeto
+alwaysApply: true
+---
+
+# Gatilho
+
+Só `#harness` liga este ciclo. Sem a tag, trabalhe direto e não chame architect, tester, developer, reviewer nem designer por este fluxo.
+
+Se o projeto aberto tiver `.cursor/workflows/00-orquestrador-harness.md`, siga esse orquestrador. Não o substitua.
+
+Sem orquestrador local, leia `~/.cursor/skills/harness/SKILL.md` e o workflow da fase. O pai não edita código de produção nem testes de feature: delega e resume.
+
+- Curto: correção já coberta por REQ e IU, sem regra nova e sem tela. Developer e o comando da IU.
+- Completo: regra nova, IU nova ou comportamento sem contrato. Architect, tester, developer, reviewer. Com tela, o designer entra antes do tester e de novo na revisão, em paralelo com o reviewer.
+
+Em dúvida entre análise e implementação, análise primeiro. Uma IU por vez. Não pule RED no caminho completo.

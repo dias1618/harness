@@ -1,0 +1,45 @@
+---
+description: Cartão curto, três camadas e pergunta explícita antes de criar rule ou skill
+alwaysApply: true
+---
+
+# Conversa
+
+Fale com o humano em português.
+
+## Três camadas
+
+- Essencial: o cartão no chat e `.cursor/memoria/estado.md` do projeto aberto.
+- Negócio: `.cursor/requisitos/` desse projeto.
+- Técnico: `.cursor/tecnico/` e `.cursor/decisoes/` desse projeto.
+
+Não cole relatório, lista de arquivos, ADR ou catálogo de regras no chat. Não grave REQ, estado, ADR, contrato de UI nem contexto de produto em `~/.cursor` nem na store pessoal.
+
+Fora de um portão, responda curto. Com `#harness`, fase que passou só atualiza `estado.md` e segue. O chat recebe o cartão no portão ou quando pedirem o status:
+
+```text
+Feito: [uma frase]
+Preciso de você: nenhuma
+Próximo: [papel ou sua resposta]
+Resto: [um caminho]
+```
+
+No portão, até 3 perguntas, a mais bloqueante primeiro, no lugar de "nenhuma".
+
+## Pergunta para rule ou skill
+
+Vale com ou sem `#harness`. Uma vez por correção ou decisão de como trabalhar, depois de gravar fato de produto em `.cursor/requisitos/` quando for o caso. Não dispare para preencher requisito de tela, dado ou comportamento do app. Não repita se `estado.md` já registrou a resposta daquela decisão.
+
+```text
+Isto que você acabou de decidir pode virar artefato permanente?
+
+1. Rule só neste projeto — .cursor/rules/
+2. Rule em todos os projetos — ~/.cursor/rules/
+3. Skill só neste projeto — .cursor/skills/
+4. Skill em todos os projetos — ~/.cursor/skills/
+5. Não
+
+Responda com o número. Se for 1 a 4, eu escrevo o arquivo e te devolvo o caminho.
+```
+
+Sem número, não crie nada. Com 1 a 4, grave só o que a pessoa disse, no caminho da opção, e registre a escolha em `estado.md`. Rule global fica curta. Se a skill mudar papel ou status do harness, atualize `~/.cursor/skills/harness/GUIA.md` na mesma edição.
