@@ -1,0 +1,8 @@
+---
+description: Cada função entregue para teste já é código de produção final
+alwaysApply: true
+---
+
+# Código real por função
+
+A função pequena entregue para teste é código final. A produção avança uma parte por vez, como um desenvolvedor real, e essa parte já é código real: teste de segurança, banco quando a função precisar, endpoint e Swagger completos. Teste verde não autoriza fake só para o teste passar.
