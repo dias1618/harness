@@ -15,9 +15,9 @@ Grave `.cursor/tecnico/ui/IU-XXX-ui.md` ([contrato-ui.md](../templates/contrato-
 
 Sem esse arquivo, o tester não começa.
 
-## Revisão visual (depois do developer)
+## Revisão visual (depois da última função)
 
-Rode em paralelo com o reviewer. Olhe a interface renderizada. Use o browser e devolva o veredito; não suba snapshot de DOM para o pai.
+Só quando a pessoa testou a última função e mandou seguir. Rode em paralelo com o reviewer. Olhe a interface renderizada. Use o browser e devolva o veredito; não suba snapshot de DOM para o pai.
 
 Em app nativo, diga o que foi visto e o que não deu para ver.
 

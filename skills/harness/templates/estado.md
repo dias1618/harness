@@ -31,6 +31,14 @@ Preciso de você:
 Próximo:
 Resto:
 
+## Função atual
+
+[nome | nenhuma]
+
+## Funções
+
+- [ ] [comportamento que a pessoa usa no sistema]
+
 ## Decisões de trabalho já perguntadas
 
 | Decisão | Escolha (1–5) |

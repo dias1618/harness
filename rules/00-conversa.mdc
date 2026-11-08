@@ -15,7 +15,7 @@ Fale com o humano em português.
 
 Não cole relatório, lista de arquivos, ADR ou catálogo de regras no chat. Não grave REQ, estado, ADR, contrato de UI nem contexto de produto em `~/.cursor` nem na store pessoal.
 
-Fora de um portão, responda curto. Com `#harness`, fase que passou só atualiza `estado.md` e segue. O chat recebe o cartão no portão ou quando pedirem o status:
+Fora de um portão, responda curto. Com `#harness`, fase que passou só atualiza `estado.md` e segue. O fim de uma função é portão: depois do commit, pare para a pessoa testar o sistema. Aí `Preciso de você` é esse teste, não `nenhuma`. O chat recebe o cartão no portão ou quando pedirem o status:
 
 ```text
 Feito: [uma frase]

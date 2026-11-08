@@ -34,18 +34,20 @@ O reviewer não refaz esses ofícios. No diff, confere se eles apareceram, e só
 
 ## Dois caminhos
 
-Curto: a correção já está coberta pelo requisito e pela unidade, sem regra nova e sem tela. Só o developer, mais o comando de validação. O reviewer entra se você pedir ou se essa unidade não tiver comando.
+Curto: a correção já está coberta pelo requisito e pela unidade, sem regra nova e sem tela. Só o developer, mais o comando de validação. Depois do commit, pare para você testar. O reviewer entra se você pedir ou se essa unidade não tiver comando, e só depois desse teste.
 
 Completo: regra nova, unidade nova ou comportamento ainda sem contrato.
 
 1. Architect publica o requisito e a unidade.
 2. Se há tela, o designer publica o contrato visual.
-3. Tester deixa os testes falhando pelo motivo certo.
-4. Developer implementa e roda o comando.
-5. Reviewer julga. Se há tela, o designer revisa o render ao mesmo tempo.
-6. Correção só para achado crítico ou alto, no máximo duas vezes. Na terceira, para em você ou no architect.
+3. O orquestrador grava a lista de funções e trata uma por vez.
+4. Tester deixa os testes dessa função falhando pelo motivo certo.
+5. Developer implementa essa função e roda o comando.
+6. O orquestrador commita a função e para para você testar o sistema.
+7. Na última função, quando você mandar seguir, o reviewer julga. Se há tela, o designer revisa o render ao mesmo tempo.
+8. Correção só para achado crítico ou alto, no máximo duas vezes. Na terceira, para em você ou no architect.
 
-Em dúvida entre analisar e implementar, a análise vem primeiro. Uma unidade por vez.
+Em dúvida entre analisar e implementar, a análise vem primeiro. Uma unidade por vez. Uma função por ciclo. A falha que originou este portão: a unidade inteira foi implementada antes da pessoa testar.
 
 ## Status
 
@@ -54,7 +56,8 @@ Em dúvida entre analisar e implementar, a análise vem primeiro. Uma unidade po
 | `BLOQUEADO` | Falta decisão sua, o risco é alto ou a spec mudou | Você, ou o architect |
 | `PRONTO_PARA_TESTES` | Requisito e unidade fechados. Com tela, o contrato visual também | Tester |
 | `RED` | Testes escritos e falhando como esperado | Developer |
-| `VALIDADO` | O comando da unidade passou | Reviewer (e designer, se há tela) |
+| `AGUARDANDO_TESTE` | A função foi commitada | Você testa o sistema. Ao mandar seguir, a próxima função ou, na última, o reviewer |
+| `VALIDADO` | A última função já foi testada por você e você mandou seguir. Sem lista de funções, o comando da unidade passou | Reviewer (e designer, se há tela) |
 | `ALTERACOES_NECESSARIAS` | Crítico ou alto, rodada 1 ou 2 | Developer |
 | `APROVADO` | Entrega aceita | Ninguém |
 
@@ -62,7 +65,7 @@ O comando que passa não aparece no chat. O que falha volta para o developer, co
 
 ## Quando o chat para
 
-Você recebe este cartão quando falta uma decisão, o risco é alto, a revisão estourou, ou quando você pede o status. Fase que passou só atualiza o estado.
+Você recebe este cartão quando falta uma decisão, o risco é alto, a revisão estourou, uma função foi commitada, ou quando você pede o status. Fora isso, fase que passou só atualiza o estado. No fim da função, o cartão diz o que abrir e o que experimentar.
 
 ```text
 Feito: [uma frase]

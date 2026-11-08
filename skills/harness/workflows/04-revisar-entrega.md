@@ -6,7 +6,7 @@ Antes de julgar, leia `~/.cursor/skills/harness/oficio/reviewer.md` por inteiro.
 
 ## Pré-condição
 
-Handoff com `VALIDADO`.
+A última função está commitada, a pessoa mandou seguir, e o estado está `VALIDADO`. Sem lista de funções, basta o handoff da unidade com o comando em PASS.
 
 ## 1. Evidência
 

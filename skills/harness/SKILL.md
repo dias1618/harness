@@ -18,18 +18,18 @@ Leia o [GUIA.md](GUIA.md) só para conferir um papel ou status. Siga o workflow 
 
 Declare em `estado.md`: curto ou completo.
 
-- **Curto.** REQ e IU já cobrem a correção, sem regra nova e sem tela. Delegue só o developer ([03](workflows/03-implementar-tdd.md)). Reviewer só se a pessoa pedir ou se a IU não tiver comando de validação.
-- **Completo.** [00](workflows/00-orquestrador.md). Análise primeiro se houver dúvida. Com tela, [06](workflows/06-designer.md) antes do tester e de novo depois do developer, em paralelo com o reviewer.
+- **Curto.** REQ e IU já cobrem a correção, sem regra nova e sem tela. Delegue só o developer ([03](workflows/03-implementar-tdd.md)). Depois do commit, pare para a pessoa testar. Reviewer só se a pessoa pedir ou se a IU não tiver comando de validação, e só depois desse teste.
+- **Completo.** [00](workflows/00-orquestrador.md). Análise primeiro se houver dúvida. Com tela, [06](workflows/06-designer.md) antes do tester. Uma função por vez. A revisão visual e o reviewer entram só depois da última função, quando a pessoa mandar seguir.
 
 ## Delegação
 
 Passe ao subagente: o pedido em uma frase, caminhos de arquivo, status, próximo papel e proibições. Não cole o corpo de REQ, IU, handoff ou diff.
 
-O subagente grava o artefato no `.cursor/` do projeto e devolve só o cartão em [templates/cartao-humano.md](templates/cartao-humano.md). Se `Preciso de você` for `nenhuma`, continue. Senão, pare e mostre o cartão.
+O subagente grava o artefato no `.cursor/` do projeto e devolve só o cartão em [templates/cartao-humano.md](templates/cartao-humano.md). Se `Preciso de você` for `nenhuma`, continue. Função commitada não é `nenhuma`: pare e mostre o cartão com o que abrir e o que experimentar.
 
 ## Portões
 
-Pare e fale com a pessoa quando faltar regra de negócio, o risco da IU for ALTO sem aceite, o RED for inválido, ou a revisão chegar à terceira rodada. Até três perguntas.
+Pare e fale com a pessoa quando faltar regra de negócio, o risco da IU for ALTO sem aceite, o RED for inválido, a revisão chegar à terceira rodada, ou uma função tiver sido commitada. Até três perguntas. A próxima função espera a pessoa mandar seguir. Na última, esse seguir chama o reviewer e, se houver tela, o designer visual.
 
 ## Manutenção
 

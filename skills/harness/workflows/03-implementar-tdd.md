@@ -1,6 +1,6 @@
 # Workflow — Implementar (developer)
 
-Levar a IU de `RED` a `VALIDADO` sem alterar teste do tester.
+Levar a função atual de `RED` a `AGUARDANDO_TESTE` sem alterar teste do tester.
 
 Antes de editar, leia `~/.cursor/skills/harness/oficio/developer.md` por inteiro.
 
@@ -14,9 +14,9 @@ IU, REQ, contrato visual se houver, testes da IU, código relacionado. Caminhos,
 
 ## 2. GREEN e REFACTOR
 
-A solução mais simples que respeita a IU e faz o teste passar. Depois, clareza sem mudar comportamento.
+A solução mais simples que respeita a função atual e faz o teste dela passar. Depois, clareza sem mudar comportamento. Não comece a próxima função.
 
-Proibido editar teste do tester, ampliar escopo ou mudar arquitetura fora da IU. Se precisar, pare em `BLOQUEADO`.
+Proibido editar teste do tester, ampliar escopo ou mudar arquitetura fora da IU. Se precisar, pare em `BLOQUEADO`. Não commite: o orquestrador commita a função.
 
 ## 3. Sensor
 
@@ -29,6 +29,6 @@ Sem comando na IU, diga isso no handoff. No caminho curto, o reviewer entra por 
 
 ## 4. Handoff
 
-Grave `.cursor/tecnico/handoffs/IU-XXX-handoff.md` ([handoff-desenvolvedor.md](../templates/handoff-desenvolvedor.md)). `VALIDADO` só com comandos ok e critérios marcados.
+Grave `.cursor/tecnico/handoffs/IU-XXX-handoff.md` ([handoff-desenvolvedor.md](../templates/handoff-desenvolvedor.md)). Marque só o critério da função atual. Não marque critério de função futura. Não use `VALIDADO` enquanto a pessoa não tiver testado a última função.
 
-Atualize `estado.md`. Devolva só o cartão. O resumo do handoff não é evidência para reviewer nem designer.
+Atualize `estado.md` para `AGUARDANDO_TESTE` e próximo papel `pessoa`. Devolva só o cartão. O resumo do handoff não é evidência para reviewer nem designer.

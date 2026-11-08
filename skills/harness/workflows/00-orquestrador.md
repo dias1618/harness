@@ -25,7 +25,8 @@ Grave o caminho em `.cursor/memoria/estado.md` ([modelo](../templates/estado.md)
 | `PRONTO_PARA_TESTES` sem contrato visual, e a IU tem tela | designer ([06](06-designer.md)) |
 | `PRONTO_PARA_TESTES` | tester ([02](02-testar-primeiro.md)) |
 | `RED` | developer ([03](03-implementar-tdd.md)) |
-| `VALIDADO` | reviewer ([04](04-revisar-entrega.md)); com tela, designer visual em paralelo |
+| `AGUARDANDO_TESTE` | Pessoa. Não chame o próximo papel |
+| `VALIDADO` | reviewer ([04](04-revisar-entrega.md)); com tela, designer visual em paralelo. Só a última função, depois que a pessoa mandou seguir |
 | `ALTERACOES_NECESSARIAS`, rodada 1 ou 2 | developer ([05](05-corrigir-revisao.md)) |
 | Rodada 3, ou spec a mudar | Pare. Pessoa ou architect |
 
@@ -38,19 +39,30 @@ Uma fase por vez, com contexto mínimo:
 - Status e rodada.
 - Proibições: developer não edita teste do tester; architect, designer e reviewer não editam código de produção; reviewer e designer visual não recebem o resumo do developer como evidência.
 
-Não cole o corpo dos documentos. Espere o cartão. `Preciso de você: nenhuma` segue. Qualquer pergunta para a pessoa.
+Não cole o corpo dos documentos. Espere o cartão. `Preciso de você: nenhuma` segue. Função commitada não é `nenhuma`. Qualquer pergunta para a pessoa.
 
-## 5. Análise
+## 5. Funções
+
+Quando REQ, IU e, se houver tela, o contrato visual existem, grave em `estado.md` a lista ordenada. Cada item é um comportamento que a pessoa usa no sistema. Não reabra o requisito.
+
+Uma função por ciclo: tester, developer, commit do orquestrador, parada. O commit segue o estilo do repositório e leva só os arquivos dessa função. O cartão diz o que abrir e o que experimentar. A próxima função espera a pessoa mandar seguir.
+
+Reviewer e, se houver tela, designer visual só depois da última função, quando a pessoa mandar seguir. Architect e o designer de contrato não refazem documento.
+
+No caminho curto, o mesmo portão: depois do commit, pare para o teste no sistema.
+
+## 6. Análise
 
 Architect grava nota curta em `.cursor/tecnico/analises/` com [relatorio-analise.md](../templates/relatorio-analise.md). Regra de negócio vai para `.cursor/requisitos/`, não para a análise. Se a análise indicar implementação, pergunte se continua no caminho completo.
 
-## 6. Revisão com tela
+## 7. Revisão com tela
 
-Depois do developer, lance reviewer e designer visual juntos. Junte os vereditos. Um CRÍTICO ou ALTO de qualquer um devolve ao developer. Sugestão de gosto não bloqueia.
+Depois que a pessoa testou a última função e mandou seguir, lance reviewer e designer visual juntos. Junte os vereditos. Um CRÍTICO ou ALTO de qualquer um devolve ao developer. Sugestão de gosto não bloqueia.
 
-## 7. Parar
+## 8. Parar
 
 - Pergunta de negócio sem resposta, ou risco ALTO sem aceite.
 - RED inválido.
 - Terceira rodada de `ALTERACOES_NECESSARIAS`.
+- Função commitada. A pessoa testa o sistema.
 - Conflito entre REQ, IU e o pedido. Não infira.
