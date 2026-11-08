@@ -24,7 +24,7 @@ O ofício de cada um está em `~/.cursor/skills/harness/oficio/`. O agente lê o
 
 O architect desenha para desacoplar: domínio sem framework, portas, tradeoff escrito e requisito funcional separado do não funcional, com o ponto em que o developer precisa estar atento. Detalhe em [oficio/architect.md](oficio/architect.md).
 
-O designer faz a tela usável sem manual: fluxo na ordem do pensamento, função importante na frente, mobile e web com ergonomia própria. Detalhe em [oficio/designer.md](oficio/designer.md).
+O designer faz a tela usável sem manual: fluxo na ordem do pensamento, função importante na frente, mobile e web com ergonomia própria. Em qualquer função, mesmo sem instrução específica, exige layout moderno, agradável, minimalista e profissional. Mudança além disso a pessoa pede na revisão dela. Detalhe em [oficio/designer.md](oficio/designer.md).
 
 O tester registra testes unitários das regras de negócio pedidas pelo architect, em classes dentro de cada projeto, com a ferramenta da linguagem ou do framework. Detalhe em [oficio/tester.md](oficio/tester.md).
 

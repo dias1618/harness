@@ -57,7 +57,7 @@ Architect grava nota curta em `.cursor/tecnico/analises/` com [relatorio-analise
 
 ## 7. Revisão com tela
 
-Depois que a pessoa testou a última função e mandou seguir, lance reviewer e designer visual juntos. Junte os vereditos. Um CRÍTICO ou ALTO de qualquer um devolve ao developer. Sugestão de gosto não bloqueia.
+Depois que a pessoa testou a última função e mandou seguir, lance reviewer e designer visual juntos. Junte os vereditos. Um CRÍTICO ou ALTO de qualquer um devolve ao developer. Tela sem layout moderno, agradável, minimalista e profissional bloqueia. Mudança além disso a pessoa pede na revisão dela.
 
 ## 8. Parar
 

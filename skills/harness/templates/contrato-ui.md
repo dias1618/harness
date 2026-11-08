@@ -31,6 +31,10 @@
 
 [O que muda em relação ao mobile]
 
+## Layout
+
+Moderno, agradável, minimalista e profissional, mesmo sem instrução específica de layout.
+
 ## Não fazer
 
 - [item]

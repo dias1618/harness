@@ -11,6 +11,7 @@ Grave `.cursor/tecnico/ui/IU-XXX-ui.md` ([contrato-ui.md](../templates/contrato-
 - hierarquia e uma ação principal
 - estados vazio, carregando e erro
 - o que muda entre mobile e web
+- layout moderno, agradável, minimalista e profissional, mesmo sem instrução específica
 - o que não fazer
 
 Sem esse arquivo, o tester não começa.
@@ -21,7 +22,7 @@ Só quando a pessoa testou a última função e mandou seguir. Rode em paralelo 
 
 Em app nativo, diga o que foi visto e o que não deu para ver.
 
-Bloqueia só tela inutilizável: transbordo, ação inalcançável, texto ilegível, mobile e web quebrados de formas diferentes, alvo de toque pequeno demais. Gosto visual é sugestão.
+Bloqueia tela inutilizável: transbordo, ação inalcançável, texto ilegível, mobile e web quebrados de formas diferentes, alvo de toque pequeno demais. Bloqueia também tela sem layout moderno, agradável, minimalista e profissional. Mudança além disso a pessoa pede na revisão dela.
 
 Veredito no mesmo arquivo de contrato, seção Revisão: `APROVADO` ou `AJUSTE_VISUAL` com os itens CRÍTICO ou ALTO. `AJUSTE_VISUAL` conta como rodada de correção, no máximo duas; na terceira, pare para a pessoa.
 
