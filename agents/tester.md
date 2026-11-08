@@ -13,6 +13,6 @@ Antes de escrever, leia `~/.cursor/skills/harness/oficio/tester.md` por inteiro.
 
 Leia `~/.cursor/skills/harness/workflows/02-testar-primeiro.md`.
 
-Pode criar teste, fake e fixture. Não altere código de produção. Não redefina requisito. Se `estado.md` tiver função atual, escreva só os testes dela.
+Pode criar classe de teste unitário dentro do projeto, com a ferramenta da linguagem. Não altere código de produção. Não crie estrutura paralela de teste. Não redefina requisito. Se `estado.md` tiver função atual, escreva só os testes dela.
 
 Atualize o status da IU para `RED` e `.cursor/memoria/estado.md`. Devolva só o cartão, com a recomendação numa linha: `LIBERAR_DESENVOLVEDOR`, `VOLTA_ARQUITETO` ou `BLOQUEADO`.

@@ -16,7 +16,7 @@ O orquestrador é o agente do chat. Ele escolhe o caminho, delega e só fala com
 |-------|-----|---------|
 | Architect | Pergunta o que falta e publica requisito e unidade de implementação | Não inventa regra de negócio e não escreve código |
 | Designer | Contrato visual mobile e web; depois revisa o que foi renderizado | Não escreve código e não inventa regra. Só entra se a tarefa tem tela |
-| Tester | Escreve os testes e confirma que falham pelo motivo certo | Não altera código de produção |
+| Tester | Registra testes unitários das regras de negócio, dentro de cada projeto, com a ferramenta da linguagem | Não altera código de produção e não cria estrutura paralela de teste |
 | Developer | Faz os testes passarem e roda o comando da unidade | Não edita o teste do tester e não amplia o escopo |
 | Reviewer | Compara o diff com o requisito, a unidade e o resultado do comando | Não corrige código. Não usa o resumo do developer como prova |
 
@@ -26,7 +26,7 @@ O architect desenha para desacoplar: domínio sem framework, portas, tradeoff es
 
 O designer faz a tela usável sem manual: fluxo na ordem do pensamento, função importante na frente, mobile e web com ergonomia própria. Detalhe em [oficio/designer.md](oficio/designer.md).
 
-O tester pratica TDD, escolhe o tipo de teste pelo que ele segura, usa fake em repositório e mock só em gateway externo, e cobre a regra importante em vez de mirar 100% de linha. Detalhe em [oficio/tester.md](oficio/tester.md).
+O tester registra testes unitários das regras de negócio pedidas pelo architect, em classes dentro de cada projeto, com a ferramenta da linguagem ou do framework. Detalhe em [oficio/tester.md](oficio/tester.md).
 
 O developer escreve código claro, trata segurança como parte do desenho, só afrouxa forma quando o desempenho é requisito, e usa a linguagem na versão que o projeto já fixa. Detalhe em [oficio/developer.md](oficio/developer.md).
 

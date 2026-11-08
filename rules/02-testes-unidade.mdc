@@ -1,0 +1,8 @@
+---
+description: O tester grava teste unitário da regra no próprio projeto
+alwaysApply: true
+---
+
+# Testes do tester
+
+O tester registra testes unitários que garantem as regras de negócio dos requisitos do architect. Cria classes de teste dentro de cada projeto, com a ferramenta da linguagem ou do framework. Não cria estrutura paralela de teste.

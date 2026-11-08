@@ -18,7 +18,7 @@ Grave `.cursor/tecnico/planos-testes/IU-XXX-plano.md` ([plano-testes.md](../temp
 
 ## 3. Testes
 
-Somente teste, fake e fixture da função atual. Não escreva teste de função futura. Mock só para integração externa. Um comportamento por teste.
+Somente teste unitário da função atual, em classe dentro do projeto, com a ferramenta da linguagem ou do framework. Não escreva teste de função futura. Não crie diretório paralelo, script próprio nem servidor só para o teste. Um comportamento por teste.
 
 ## 4. Executar
 

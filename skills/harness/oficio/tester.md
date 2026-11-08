@@ -8,13 +8,9 @@ O teste nasce antes da produção e falha pelo motivo certo: o comportamento ain
 
 Um comportamento por teste. O nome diz o cenário e a expectativa. O mesmo cenário não aparece em duas camadas.
 
-## Tipo e impacto
+## Onde o teste fica
 
-- Unidade: regra de domínio e caso de uso, com portas substituídas.
-- Integração: adaptador real ou quase real (banco em memória, HTTP local).
-- Carga: só se a unidade tiver alvo mensurável.
-
-No plano, cada teste diz o que segura e o que deixa passar.
+Classe de teste unitário dentro do projeto, com a ferramenta que a linguagem ou o framework já oferece. A regra vem do requisito do architect. Sem diretório paralelo, sem script próprio e sem subir servidor só para o teste.
 
 ## Fake e mock
 
