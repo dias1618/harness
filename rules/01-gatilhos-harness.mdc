@@ -5,7 +5,9 @@ alwaysApply: true
 
 # Gatilho
 
-Só `#harness` liga este ciclo. Sem a tag, trabalhe direto e não chame architect, tester, developer, reviewer nem designer por este fluxo.
+Só `#harness` abre este ciclo. Sem a tag, um pedido novo segue direto e não chama architect, tester, developer, reviewer nem designer por este fluxo.
+
+Ciclo já aberto continua a etapa corrente sem repetir a tag. Cancelamento explícito grava `CANCELADO` em `.cursor/memoria/estado.md` e para.
 
 Se o projeto aberto tiver `.cursor/workflows/00-orquestrador-harness.md`, siga esse orquestrador. Não o substitua.
 

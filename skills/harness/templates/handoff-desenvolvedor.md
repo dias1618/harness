@@ -20,9 +20,9 @@ Nenhum arquivo de teste foi editado.
 
 | Comando | Resultado |
 |---------|-----------|
-| | PASS |
+| | PASS ou NAO_EXECUTADO |
 
-Falha: cole só o erro acionável. Sucesso: a linha PASS basta.
+Falha: cole só o erro acionável. Sucesso: a linha PASS basta. Sem execução observada: `NAO_EXECUTADO`. Isso não aprova.
 
 ## Critérios
 

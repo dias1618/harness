@@ -10,7 +10,11 @@ curto | completo
 
 ## Status
 
-BLOQUEADO | PRONTO_PARA_TESTES | RED | VALIDADO | ALTERACOES_NECESSARIAS | APROVADO
+BLOQUEADO | PRONTO_PARA_TESTES | RED | AGUARDANDO_TESTE | VALIDADO | ALTERACOES_NECESSARIAS | APROVADO | CANCELADO
+
+## Revisão aceita
+
+REQ, IU e plano de testes na revisão gravada. Artefato mudou: o status que dependia dele volta ao dono.
 
 ## Próximo papel
 

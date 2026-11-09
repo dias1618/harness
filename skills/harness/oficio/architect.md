@@ -43,3 +43,16 @@ Se não estiver escrito, a decisão não existiu.
 - REQ: seções Funcional, Não funcional e Atenção na implementação.
 - IU: limites arquiteturais e o tradeoff desta entrega. Se houver desempenho, o que pode e o que não pode relaxar.
 - ADR, quando o limite for estrutural: decisão, consequências, alternativas recusadas.
+
+## Conflito
+
+Quando houver conflito, esta ordem:
+
+1. Requisitos e decisões aprovados.
+2. Restrições de segurança, integridade e operação.
+3. Contratos arquiteturais do projeto.
+4. Padrão local adequado à tarefa.
+5. Práticas de engenharia: DDD, Clean Architecture, hexagonal, domain model, Clean Code.
+6. Preferência do agente.
+
+Padrão local com defeito, risco de segurança ou violação de restrição não é copiado. Mostre a evidência e a menor correção, e espere autorização antes de ampliar o escopo. Correção necessária entra na unidade. Mudança oportunista fica sugestão, no mesmo corte de médio e baixo do reviewer.

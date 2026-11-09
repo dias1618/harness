@@ -14,6 +14,8 @@ Leia o [GUIA.md](GUIA.md) só para conferir um papel ou status. Siga o workflow 
 3. Sem `.cursor/context/projeto.md`, pergunte antes de criar o esqueleto. Não invente produto.
 4. Leia `.cursor/memoria/estado.md` quando existir. É a memória da sessão, não o chat.
 
+Resposta da etapa corrente continua sem `#harness`. Pedido novo sem a tag fica fora do ciclo. Cancelamento explícito grava `CANCELADO` e para.
+
 ## Caminho
 
 Declare em `estado.md`: curto ou completo.
@@ -25,7 +27,7 @@ Declare em `estado.md`: curto ou completo.
 
 Passe ao subagente: o pedido em uma frase, caminhos de arquivo, status, próximo papel e proibições. Não cole o corpo de REQ, IU, handoff ou diff.
 
-O subagente grava o artefato no `.cursor/` do projeto e devolve só o cartão em [templates/cartao-humano.md](templates/cartao-humano.md). Se `Preciso de você` for `nenhuma`, continue. Função commitada não é `nenhuma`: pare e mostre o cartão com o que abrir e o que experimentar.
+O subagente grava o artefato no `.cursor/` do projeto e devolve só o cartão em [templates/cartao-humano.md](templates/cartao-humano.md). Se `Preciso de você` for `nenhuma`, continue. Função commitada não é `nenhuma`: pare e mostre o cartão com o que abrir e o que experimentar. Pergunta aberta interrompe a delegação. Um papel não responde dúvida de outro.
 
 ## Portões
 

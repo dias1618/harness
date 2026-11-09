@@ -4,7 +4,9 @@ Texto para consulta. O passo a passo que os agentes seguem está nos workflows d
 
 ## O que liga o ciclo
 
-`#harness` na mensagem liga o ciclo. Sem essa tag, o trabalho segue direto, fora desta máquina de estados.
+`#harness` na mensagem abre o ciclo. Pedido novo sem essa tag segue direto, fora desta máquina de estados.
+
+Resposta de um ciclo já aberto continua a etapa, sem repetir a tag. Cancelamento explícito grava `CANCELADO` e para.
 
 Se o projeto aberto tiver `.cursor/workflows/00-orquestrador-harness.md`, vale o orquestrador desse projeto. É o caso do sharechar. Este guia descreve o harness geral.
 
@@ -45,7 +47,7 @@ Completo: regra nova, unidade nova ou comportamento ainda sem contrato.
 5. Developer implementa essa função e roda o comando.
 6. O orquestrador commita a função e para para você testar o sistema.
 7. Na última função, quando você mandar seguir, o reviewer julga. Se há tela, o designer revisa o render ao mesmo tempo.
-8. Correção só para achado crítico ou alto, no máximo duas vezes. Na terceira, para em você ou no architect.
+8. Defeito de implementação, crítico ou alto, volta ao developer, no máximo duas vezes. Regra, plano ou teste voltam ao papel da causa. Na terceira, para em você ou no architect.
 
 Em dúvida entre analisar e implementar, a análise vem primeiro. Uma unidade por vez. Uma função por ciclo. A falha que originou este portão: a unidade inteira foi implementada antes da pessoa testar.
 
@@ -58,10 +60,13 @@ Em dúvida entre analisar e implementar, a análise vem primeiro. Uma unidade po
 | `RED` | Testes escritos e falhando como esperado | Developer |
 | `AGUARDANDO_TESTE` | A função foi commitada | Você testa o sistema. Ao mandar seguir, a próxima função ou, na última, o reviewer |
 | `VALIDADO` | A última função já foi testada por você e você mandou seguir. Sem lista de funções, o comando da unidade passou | Reviewer (e designer, se há tela) |
-| `ALTERACOES_NECESSARIAS` | Crítico ou alto, rodada 1 ou 2 | Developer |
-| `APROVADO` | Entrega aceita | Ninguém |
+| `ALTERACOES_NECESSARIAS` | Crítico ou alto, rodada 1 ou 2 | Developer se for defeito. Tester ou architect se a causa for outra |
+| `APROVADO` | Entrega aceita. O sensor foi executado e a revisão não tem achado impeditivo | Ninguém |
+| `CANCELADO` | Você cancelou | Ninguém |
 
-O comando que passa não aparece no chat. O que falha volta para o developer, com o erro.
+O comando que passa não aparece no chat. O que falha volta para o developer, com o erro. Comando que ninguém rodou fica `NAO_EXECUTADO` e não aprova. Merge, publicação e implantação só são afirmados depois de executados.
+
+A aprovação vale para a revisão gravada do requisito, da unidade e do plano de testes. Se um deles mudar, o status que dependia dele volta ao dono.
 
 ## Quando o chat para
 

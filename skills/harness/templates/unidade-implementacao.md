@@ -48,7 +48,21 @@ sim | não
 
 ## Validação
 
-- `[comando]` — esperado: sucesso
+Obrigatório em mudança de código:
+
+- `[testes novos]` — esperado: sucesso
+- `[testes preexistentes da área]` — esperado: sucesso
+- `[compilação ou análise estática do projeto, se houver]` — esperado: sucesso
+
+Conforme o escopo, quando a unidade os alcançar:
+
+- `[suíte | banco | API | contrato | build]` — esperado: sucesso
+
+Conforme o risco, quando a IU o tiver:
+
+- `[segurança | desempenho | concorrência | migração | compatibilidade]` — esperado: sucesso
+
+Comando ausente ou não executado: `NAO_EXECUTADO`. Isso não aprova.
 
 ## Risco
 
