@@ -1,21 +1,16 @@
 ---
-description: #harness escolhe caminho curto ou completo; não substitui orquestrador do projeto
+description: #harness abre o ciclo; detalhes em skills/harness/SKILL.md
 alwaysApply: true
 ---
 
 # Gatilho
 
-Só `#harness` abre este ciclo. Sem a tag, um pedido novo segue direto e não chama architect, tester, developer, reviewer nem designer por este fluxo.
+Só `#harness` abre este ciclo. Pedido novo sem a tag não delega architect, tester, developer, reviewer nem designer.
 
-Ciclo já aberto continua a etapa corrente sem repetir a tag. Cancelamento explícito grava `CANCELADO` em `.cursor/memoria/estado.md` e para.
+Ciclo já aberto continua a etapa sem repetir a tag. Cancelamento explícito grava `CANCELADO` em `.cursor/memoria/estado.md` e para.
 
-Se o projeto aberto tiver `.cursor/workflows/00-orquestrador-harness.md`, siga esse orquestrador. Não o substitua.
+Se o projeto tiver `.cursor/workflows/00-orquestrador-harness.md`, siga esse arquivo. Não o substitua.
 
-Sem orquestrador local, leia `~/.cursor/skills/harness/SKILL.md` e o workflow da fase. O pai não edita código de produção nem testes de feature: delega e resume.
+Sem orquestrador local, leia `~/.cursor/skills/harness/SKILL.md` e só o workflow da fase corrente. Cartão, portões e caminho curto ou completo estão na skill e em `00-conversa`. O pai delega e não edita código de produção nem testes de feature.
 
-- Curto: correção já coberta por REQ e IU, sem regra nova e sem tela. Developer e o comando da IU. Depois do commit, pare para a pessoa testar.
-- Completo: regra nova, IU nova ou comportamento sem contrato. Architect, tester, developer, reviewer. Com tela, o designer entra antes do tester. A revisão visual entra com o reviewer, só depois da última função.
-
-Com os documentos prontos, uma função por vez. O tester cobre só a função atual. O developer implementa essa função. O orquestrador commita e para. A próxima função só começa quando a pessoa mandar seguir.
-
-Em dúvida entre análise e implementação, análise primeiro. Uma IU por vez. Não pule RED no caminho completo.
+Em dúvida entre analisar e implementar, análise primeiro. Uma IU por conversa ativa, salvo retomada pelo `estado.md`. Não pule RED no caminho completo.

@@ -20,6 +20,8 @@ Sem esse arquivo, o tester não começa.
 
 Só quando a pessoa testou a última função e mandou seguir. Rode em paralelo com o reviewer. Olhe a interface renderizada. Use o browser e devolva o veredito; não suba snapshot de DOM para o pai.
 
+Um snapshot por viewport ou estado que importa para o contrato (vazio, carregando, erro, mobile). Não repita captura sem hipótese nova.
+
 Em app nativo, diga o que foi visto e o que não deu para ver.
 
 Bloqueia tela inutilizável: transbordo, ação inalcançável, texto ilegível, mobile e web quebrados de formas diferentes, alvo de toque pequeno demais. Bloqueia também tela sem layout moderno, agradável, minimalista e profissional. Mudança além disso a pessoa pede na revisão dela.

@@ -2,6 +2,8 @@
 
 Leia isto por inteiro antes de escrever testes. Não altere código de produção. Não redefina requisito.
 
+Com `função atual` em `estado.md`, a spec de produto vem do bloco homônimo em **Funções por ciclo** na IU, não da IU inteira.
+
 ## TDD
 
 O teste nasce antes da produção e falha pelo motivo certo: o comportamento ainda não existe. Falha de compilação ou de setup não é RED.

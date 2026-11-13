@@ -10,7 +10,7 @@ IU em `RED` e tester liberou. No caminho curto, a IU já está contratada e os t
 
 ## 1. Contexto
 
-IU, REQ, contrato visual se houver, testes da IU, código relacionado. Caminhos, não corpos colados.
+Leia `estado.md` e o bloco da **função atual** em **Funções por ciclo** na IU. REQ e contrato visual só se o bloco ou o critério exigir. Testes do tester para esta função primeiro. Código: `glob`/`grep` antes de `read` em arquivo grande; caminhos, não corpos colados.
 
 ## 2. GREEN e REFACTOR
 

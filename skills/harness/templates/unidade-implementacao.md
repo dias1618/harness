@@ -41,6 +41,22 @@ sim | não
 
 - [ ] [comportamento testável]
 
+## Funções por ciclo
+
+Cada bloco espelha um item da lista em `estado.md`. Um ciclo tester → developer cobre só uma função.
+
+### [nome da função 1]
+
+- Critérios desta função:
+- Arquivos prováveis:
+- Validação parcial, se couber:
+
+### [nome da função 2]
+
+- Critérios desta função:
+- Arquivos prováveis:
+- Validação parcial, se couber:
+
 ## Testes exigidos
 
 - Unidade:

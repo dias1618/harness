@@ -22,7 +22,7 @@ Resposta da pessoa vira regra testável em `.cursor/requisitos/REQ-XXX.md` ([req
 
 Grave `.cursor/tecnico/unidades-implementacao/IU-XXX.md` ([unidade-implementacao.md](../templates/unidade-implementacao.md)).
 
-A IU tem critérios testáveis, tipos de teste, risco e a seção Validação. Em mudança de código, escreva os testes novos, os testes preexistentes da área e a compilação ou análise estática que o projeto já tiver. Suíte, banco, API, contrato e build entram quando o escopo os alcança. Segurança, desempenho, concorrência, migração e compatibilidade entram quando o risco existir. Placeholder aceitável no comando ainda não descoberto. Comando que ninguém rodar fica `NAO_EXECUTADO` e não aprova. Regravar REQ ou IU já aceitos zera a aprovação que dependia deles.
+A IU tem critérios testáveis, **Funções por ciclo** (um bloco por comportamento que a pessoa testa no portão), tipos de teste, risco e a seção Validação. A lista em `estado.md` usa os mesmos nomes. Em mudança de código, escreva os testes novos, os testes preexistentes da área e a compilação ou análise estática que o projeto já tiver. Suíte, banco, API, contrato e build entram quando o escopo os alcança. Segurança, desempenho, concorrência, migração e compatibilidade entram quando o risco existir. Placeholder aceitável no comando ainda não descoberto. Comando que ninguém rodar fica `NAO_EXECUTADO` e não aprova. Regravar REQ ou IU já aceitos zera a aprovação que dependia deles.
 
 Limite novo que valha para várias IUs vira ADR em `.cursor/decisoes/ADR/` ([decisao-adr.md](../templates/decisao-adr.md)).
 

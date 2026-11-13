@@ -16,6 +16,8 @@ Outra causa não entra neste workflow:
 
 Implemente apenas os itens obrigatórios do relatório de revisão e, se houver tela, do veredito visual. Ignore MÉDIO e BAIXO.
 
+Reabra só os arquivos citados no relatório ou no diff; não varra o repositório de novo.
+
 ## 2. Limites
 
 Não altere teste do tester. Sem refatoração fora da correção. Se a correção exigir mudança de REQ ou contrato, pare em `BLOQUEADO` e volte ao architect.

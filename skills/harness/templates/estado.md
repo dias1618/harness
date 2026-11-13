@@ -41,6 +41,8 @@ Resto:
 
 ## Funções
 
+Mesmos nomes e ordem da seção **Funções por ciclo** da IU.
+
 - [ ] [comportamento que a pessoa usa no sistema]
 
 ## Decisões de trabalho já perguntadas

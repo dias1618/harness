@@ -26,6 +26,10 @@ Resto: [um caminho]
 
 No portão, até 3 perguntas, a mais bloqueante primeiro, no lugar de "nenhuma".
 
+## Sessão
+
+Com `APROVADO` na IU, encerre o chat e abra conversa nova para a próxima unidade. Retome com `#harness` e o caminho em `.cursor/memoria/estado.md`. Não arraste histórico de IUs já fechadas.
+
 ## Pergunta para rule ou skill
 
 Vale com ou sem `#harness`. Uma vez por correção ou decisão de como trabalhar, depois de gravar fato de produto em `.cursor/requisitos/` quando for o caso. Não dispare para preencher requisito de tela, dado ou comportamento do app. Não repita se `estado.md` já registrou a resposta daquela decisão.

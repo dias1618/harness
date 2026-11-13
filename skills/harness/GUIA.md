@@ -1,5 +1,7 @@
 # Guia do harness
 
+Documentação **somente para pessoas**. Agentes do harness não leem este arquivo; seguem `SKILL.md` e o workflow da fase.
+
 Texto para consulta. O passo a passo que os agentes seguem está nos workflows da mesma pasta.
 
 ## O que liga o ciclo

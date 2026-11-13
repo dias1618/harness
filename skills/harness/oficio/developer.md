@@ -2,6 +2,8 @@
 
 Leia isto por inteiro antes de editar produção. Não edite teste do tester. Não amplie a unidade.
 
+Com `função atual` em `estado.md`, o escopo vem do bloco homônimo em **Funções por ciclo** na IU. Use `glob`/`grep` antes de abrir arquivos grandes.
+
 ## Clean code
 
 Dentro da unidade: nome claro, função pequena, poucos níveis, sem gambiarra para o teste passar. A menor mudança correta. Refatore depois do verde, sem mudar comportamento.

@@ -2,11 +2,15 @@
 
 O agente do chat classifica, delega e só fala com a pessoa no portão. Não substitui os papéis.
 
+`GUIA.md` é para pessoas. Não leia em runtime.
+
 ## 1. Projeto com orquestrador próprio
 
 Se existir `.cursor/workflows/00-orquestrador-harness.md`, siga esse arquivo e pare este workflow.
 
 ## 2. Classificar
+
+Prefira **curto** quando REQ e IU já fecharem o comportamento. Só vá ao completo com regra nova, IU nova, tela nova ou lacuna real de contrato.
 
 | Situação | Caminho |
 |----------|---------|
@@ -45,11 +49,12 @@ Correção pequena regrava `estado.md` e o relatório da etapa que rodou. Persis
 Uma fase por vez, com contexto mínimo:
 
 - Pedido em uma frase.
-- Caminhos de REQ, IU, ADR, contrato visual, plano, handoff.
+- Caminho de `.cursor/memoria/estado.md` e `função atual`.
+- Caminhos de REQ, IU, ADR, contrato visual, plano, handoff ou revisão.
 - Status e rodada.
 - Proibições: developer não edita teste do tester; architect, designer e reviewer não editam código de produção; reviewer e designer visual não recebem o resumo do developer como evidência.
 
-Não cole o corpo dos documentos. Espere o cartão. `Preciso de você: nenhuma` segue. Função commitada não é `nenhuma`. Qualquer pergunta vai para a pessoa. Pergunta aberta interrompe a delegação. Um papel não responde dúvida de outro.
+Não cole o corpo dos documentos nem recapitule o chat. Espere o cartão. `Preciso de você: nenhuma` segue. Função commitada não é `nenhuma`. Qualquer pergunta vai para a pessoa. Pergunta aberta interrompe a delegação. Um papel não responde dúvida de outro.
 
 ## 5. Funções
 
@@ -71,6 +76,7 @@ Depois que a pessoa testou a última função e mandou seguir, lance reviewer e 
 
 ## 8. Parar
 
+- `APROVADO` na IU: cartão final e conversa nova para a próxima unidade.
 - Pergunta de negócio sem resposta, ou risco ALTO sem aceite.
 - RED inválido.
 - Terceira rodada de `ALTERACOES_NECESSARIAS`.

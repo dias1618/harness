@@ -10,7 +10,7 @@ IU em `PRONTO_PARA_TESTES`. Se a IU tem tela, `.cursor/tecnico/ui/IU-XXX-ui.md` 
 
 ## 1. Contexto
 
-IU, REQ e ADRs pelos caminhos recebidos. Código só para achar onde os testes moram.
+Leia `.cursor/memoria/estado.md` e o bloco da **função atual** na seção **Funções por ciclo** da IU. Abra REQ e ADRs só para critérios que essa função cruza. Não leia a IU inteira se o bloco bastar. Código: `glob`/`grep` para achar onde os testes moram; evite ler arquivos grandes inteiros.
 
 ## 2. Plano
 
