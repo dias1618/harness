@@ -1,6 +1,6 @@
 ---
 name: harness
-description: Orquestra o ciclo #harness — caminho curto (developer e validação) ou completo (architect, tester, developer, reviewer, e designer se houver tela). Use quando a mensagem contiver #harness, ao retomar uma IU, ou ao seguir o estado em .cursor/memoria/estado.md. Não use se o projeto tiver .cursor/workflows/00-orquestrador-harness.md.
+description: Orquestra o ciclo #harness — caminho curto (developer e validação) ou completo (architect, tester, developer, reviewer, e designer se houver tela). Cria o README do projeto quando não existir e o mantém com informe geral, tecnologias, principais bibliotecas e como colocar no ar. Use quando a mensagem contiver #harness, ao retomar uma IU, ao seguir o estado em .cursor/memoria/estado.md, ou quando o README da raiz faltar ou sair dessa forma. Não use se o projeto tiver .cursor/workflows/00-orquestrador-harness.md.
 ---
 
 # Harness
@@ -13,6 +13,7 @@ description: Orquestra o ciclo #harness — caminho curto (developer e validaç�
 2. Se a raiz do workspace for `~/.cursor`, não crie requisito nem memória aqui. Diga para abrir o projeto do produto.
 3. Sem `.cursor/context/projeto.md`, pergunte antes de criar o esqueleto. Não invente produto.
 4. Leia `.cursor/memoria/estado.md` quando existir. É a memória da sessão, não o chat.
+5. Na raiz do projeto, sempre manter o README dessa forma ou criá-lo quando não existir. Dessa forma: informe geral sobre o projeto, indicando suas tecnologias, principais bibliotecas, e também como colocar esse projeto no ar. Senha e segredo não entram no arquivo.
 
 Resposta da etapa corrente continua sem `#harness`. Pedido novo sem a tag fica fora do ciclo. Cancelamento explícito grava `CANCELADO` e para.
 

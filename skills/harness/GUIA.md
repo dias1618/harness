@@ -10,6 +10,8 @@ Texto para consulta. O passo a passo que os agentes seguem está nos workflows d
 
 Resposta de um ciclo já aberto continua a etapa, sem repetir a tag. Cancelamento explícito grava `CANCELADO` e para.
 
+Na raiz do projeto, o harness cria o `README.md` quando o arquivo não existe. Se existe, mantém o informe geral, as tecnologias, as principais bibliotecas e como colocar o projeto no ar. Senha e segredo ficam de fora.
+
 Se o projeto aberto tiver `.cursor/workflows/00-orquestrador-harness.md`, vale o orquestrador desse projeto. É o caso do sharechar. Este guia descreve o harness geral.
 
 ## Papéis
