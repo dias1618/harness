@@ -11,7 +11,7 @@ description: Orquestra o ciclo #harness — caminho curto (developer e validaç�
 
 1. Se existir `.cursor/workflows/00-orquestrador-harness.md` no projeto aberto, pare esta skill e siga o arquivo do projeto.
 2. Se a raiz do workspace for `~/.cursor`, não crie requisito nem memória aqui. Diga para abrir o projeto do produto.
-3. Sem `.cursor/context/projeto.md`, pergunte antes de criar o esqueleto. Não invente produto.
+3. Sem `.cursor/context/projeto.md`, pare e pergunte no formulário, como pergunta aberta. Não invente produto.
 4. Leia `.cursor/memoria/estado.md` quando existir. É a memória da sessão, não o chat.
 5. Na raiz do projeto, sempre manter o README dessa forma ou criá-lo quando não existir. Dessa forma: informe geral sobre o projeto, indicando suas tecnologias, principais bibliotecas, e também como colocar esse projeto no ar. Senha e segredo não entram no arquivo.
 
@@ -24,19 +24,29 @@ Classifique antes de delegar. Na dúvida entre curto e completo, prove que falta
 Declare em `estado.md`: curto ou completo.
 
 - **Curto.** REQ e IU já cobrem a correção, sem regra nova e sem tela. Delegue só o developer ([03](workflows/03-implementar-tdd.md)). Depois do commit, pare para a pessoa testar. Reviewer só se a pessoa pedir ou se a IU não tiver comando de validação, e só depois desse teste.
-- **Completo.** [00](workflows/00-orquestrador.md). Análise primeiro se houver dúvida. Com tela, [06](workflows/06-designer.md) antes do tester. Uma função por vez. A revisão visual e o reviewer entram só depois da última função, quando a pessoa mandar seguir.
+- **Completo.** [00](workflows/00-orquestrador.md). Análise primeiro se houver dúvida. Com tela, [06](workflows/06-designer.md) antes do tester. Uma função por vez. A revisão visual e o reviewer entram só depois da última função, quando a pessoa escolher Seguir.
 
-Com `APROVADO` na IU, pare e peça conversa nova para a próxima unidade (ver `00-conversa`).
+Com `APROVADO` na IU, pare e abra o formulário da conversa nova (ver `00-conversa`).
 
 ## Delegação
 
 Passe ao subagente apenas: pedido em uma frase; caminhos de `estado.md`, REQ, IU, plano, handoff ou revisão; status; `função atual`; rodada; proibições. Sem resumo do chat, sem corpo de REQ, IU, handoff ou diff.
 
-O subagente grava o artefato no `.cursor/` do projeto e devolve só o cartão em [templates/cartao-humano.md](templates/cartao-humano.md). Se `Preciso de você` for `nenhuma`, continue. Função commitada não é `nenhuma`: pare e mostre o cartão com o que abrir e o que experimentar. Pergunta aberta interrompe a delegação. Um papel não responde dúvida de outro.
+O subagente grava o artefato no `.cursor/` do projeto e devolve só o cartão em [templates/cartao-humano.md](templates/cartao-humano.md). Se `Preciso de você` for `nenhuma`, continue. Função commitada não é `nenhuma`: pare, mostre o cartão com o que abrir e o que experimentar, e abra o formulário. Pergunta aberta interrompe a delegação. Um papel não responde dúvida de outro e não abre o formulário.
 
 ## Portões
 
-Pare e fale com a pessoa quando faltar regra de negócio, o risco da IU for ALTO sem aceite, o RED for inválido, a revisão chegar à terceira rodada, ou uma função tiver sido commitada. Até três perguntas. A próxima função espera a pessoa mandar seguir. Na última, esse seguir chama o reviewer e, se houver tela, o designer visual.
+Pare e fale com a pessoa quando faltar regra de negócio, o risco da IU for ALTO sem aceite, o RED for inválido, a revisão chegar à terceira rodada, ou uma função tiver sido commitada. A próxima função espera Seguir. Na última, Seguir chama o reviewer e, se houver tela, o designer visual.
+
+Só o agente do chat abre o formulário AskQuestion, no mesmo turno do cartão. Não repita as opções na mensagem. `Preciso de você: nenhuma` não abre formulário. Pedido de status sem decisão pendente mostra só o cartão. Até três perguntas, a mais bloqueante primeiro, só se forem independentes. A recomendada, se existir, vai na frente com `(Recommended)`.
+
+O papel grava a pergunta em `estado.md` e devolve o cartão. O pai lê Perguntas abertas e monta o formulário. Campo livre é a resposta da pessoa, não um palpite do agente. Sem alternativa real, as opções são `A resposta está no campo livre` e `Ainda não sei — manter bloqueado`. Alternativa que o papel já encontrou entra no lugar desse par. O texto livre, quando for fato do produto, vira regra em `.cursor/requisitos/`. `Ainda não sei — manter bloqueado` deixa o status em `BLOQUEADO`.
+
+- Fim de função: o cartão diz o que abrir e o que experimentar. Opções: Seguir, Parar. Problema no campo livre não avança a função.
+- Risco alto: Aceito o risco, Não aceito.
+- Depois da análise: Seguir no caminho completo, Parar.
+- IU aprovada: Encerrar esta conversa, Continuar nesta conversa sem abrir a próxima unidade.
+- Rule ou skill: as cinco opções de `00-conversa`. Campo livre não cria arquivo. A escolha gravada é o texto da opção.
 
 ## Manutenção
 

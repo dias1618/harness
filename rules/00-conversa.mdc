@@ -19,31 +19,29 @@ Fora de um portão, responda curto. Ciclo aberto continua a etapa sem repetir `#
 
 ```text
 Feito: [uma frase]
-Preciso de você: nenhuma
+Preciso de você: [uma frase, sem alternativas]
 Próximo: [papel ou sua resposta]
 Resto: [um caminho]
 ```
 
-No portão, até 3 perguntas, a mais bloqueante primeiro, no lugar de "nenhuma".
+`Preciso de você: nenhuma` não abre formulário e o ciclo segue. Pedido de status sem decisão pendente mostra só o cartão.
+
+Quando a parada espera resposta, o agente do chat abre o formulário AskQuestion no mesmo turno. Não repete as opções na mensagem. Até três perguntas, a mais bloqueante primeiro, e só se forem independentes. Papel não abre formulário: grava a pergunta no estado e devolve o cartão.
 
 ## Sessão
 
-Com `APROVADO` na IU, encerre o chat e abra conversa nova para a próxima unidade. Retome com `#harness` e o caminho em `.cursor/memoria/estado.md`. Não arraste histórico de IUs já fechadas.
+Com `APROVADO` na IU, o cartão fecha a unidade e o formulário oferece encerrar esta conversa ou continuar nela sem abrir a próxima unidade. Retome com `#harness` e o caminho em `.cursor/memoria/estado.md`. Não arraste histórico de IUs já fechadas.
 
 ## Pergunta para rule ou skill
 
 Vale com ou sem `#harness`. Uma vez por correção ou decisão de como trabalhar, depois de gravar fato de produto em `.cursor/requisitos/` quando for o caso. Não dispare para preencher requisito de tela, dado ou comportamento do app. Não repita se `estado.md` já registrou a resposta daquela decisão.
 
-```text
-Isto que você acabou de decidir pode virar artefato permanente?
+Abra o formulário com a pergunta "Isto que você acabou de decidir pode virar artefato permanente?" e estas opções, sem numerá-las no chat:
 
-1. Rule só neste projeto — .cursor/rules/
-2. Rule em todos os projetos — ~/.cursor/rules/
-3. Skill só neste projeto — .cursor/skills/
-4. Skill em todos os projetos — ~/.cursor/skills/
-5. Não
+- Rule só neste projeto — .cursor/rules/
+- Rule em todos os projetos — ~/.cursor/rules/
+- Skill só neste projeto — .cursor/skills/
+- Skill em todos os projetos — ~/.cursor/skills/
+- Não
 
-Responda com o número. Se for 1 a 4, eu escrevo o arquivo e te devolvo o caminho.
-```
-
-Sem número, não crie nada. Com 1 a 4, grave só o que a pessoa disse, no caminho da opção, e registre a escolha em `estado.md`. Rule global fica curta. Se a skill mudar papel ou status do harness, atualize `~/.cursor/skills/harness/GUIA.md` na mesma edição.
+Campo livre não cria arquivo. Com uma das quatro primeiras, grave só o que a pessoa disse, no caminho da opção, e registre em `estado.md` o texto da opção. Rule global fica curta. Se a skill mudar papel ou status do harness, atualize `~/.cursor/skills/harness/GUIA.md` na mesma edição.

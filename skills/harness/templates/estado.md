@@ -22,7 +22,14 @@ architect | designer | tester | developer | reviewer | pessoa
 
 ## Perguntas abertas
 
-- [ou Nenhuma]
+Nenhuma
+
+ou, até três, a mais bloqueante primeiro:
+
+- id: [curto]
+  prompt: [a pergunta, autocontida]
+  opcoes: [alternativas reais separadas por " | ", ou vazio]
+  multipla: nao
 
 ## Último veredito
 
@@ -47,6 +54,6 @@ Mesmos nomes e ordem da seção **Funções por ciclo** da IU.
 
 ## Decisões de trabalho já perguntadas
 
-| Decisão | Escolha (1–5) |
-|---------|----------------|
+| Decisão | Escolha |
+|---------|---------|
 | | |

@@ -50,7 +50,7 @@ Completo: regra nova, unidade nova ou comportamento ainda sem contrato.
 4. Tester deixa os testes dessa função falhando pelo motivo certo.
 5. Developer implementa essa função e roda o comando.
 6. O orquestrador commita a função e para para você testar o sistema.
-7. Na última função, quando você mandar seguir, o reviewer julga. Se há tela, o designer revisa o render ao mesmo tempo.
+7. Na última função, quando você escolher Seguir, o reviewer julga. Se há tela, o designer revisa o render ao mesmo tempo.
 8. Defeito de implementação, crítico ou alto, volta ao developer, no máximo duas vezes. Regra, plano ou teste voltam ao papel da causa. Na terceira, para em você ou no architect.
 
 Em dúvida entre analisar e implementar, a análise vem primeiro. Uma unidade por vez. Uma função por ciclo. A falha que originou este portão: a unidade inteira foi implementada antes da pessoa testar.
@@ -62,8 +62,8 @@ Em dúvida entre analisar e implementar, a análise vem primeiro. Uma unidade po
 | `BLOQUEADO` | Falta decisão sua, o risco é alto ou a spec mudou | Você, ou o architect |
 | `PRONTO_PARA_TESTES` | Requisito e unidade fechados. Com tela, o contrato visual também | Tester |
 | `RED` | Testes escritos e falhando como esperado | Developer |
-| `AGUARDANDO_TESTE` | A função foi commitada | Você testa o sistema. Ao mandar seguir, a próxima função ou, na última, o reviewer |
-| `VALIDADO` | A última função já foi testada por você e você mandou seguir. Sem lista de funções, o comando da unidade passou | Reviewer (e designer, se há tela) |
+| `AGUARDANDO_TESTE` | A função foi commitada | Você testa o sistema. Com Seguir, a próxima função ou, na última, o reviewer |
+| `VALIDADO` | A última função já foi testada por você e você escolheu Seguir. Sem lista de funções, o comando da unidade passou | Reviewer (e designer, se há tela) |
 | `ALTERACOES_NECESSARIAS` | Crítico ou alto, rodada 1 ou 2 | Developer se for defeito. Tester ou architect se a causa for outra |
 | `APROVADO` | Entrega aceita. O sensor foi executado e a revisão não tem achado impeditivo | Ninguém |
 | `CANCELADO` | Você cancelou | Ninguém |
@@ -74,16 +74,20 @@ A aprovação vale para a revisão gravada do requisito, da unidade e do plano d
 
 ## Quando o chat para
 
-Você recebe este cartão quando falta uma decisão, o risco é alto, a revisão estourou, uma função foi commitada, ou quando você pede o status. Fora isso, fase que passou só atualiza o estado. No fim da função, o cartão diz o que abrir e o que experimentar.
+Você recebe este cartão quando falta uma decisão, o risco é alto, a revisão estourou, uma função foi commitada, ou quando você pede o status. Fora disso, fase que passou só atualiza o estado. No fim da função, o cartão diz o que abrir e o que experimentar.
 
 ```text
 Feito: [uma frase]
-Preciso de você: nenhuma
+Preciso de você: [uma frase, sem alternativas]
 Próximo: [papel ou sua resposta]
 Resto: [um caminho]
 ```
 
-No portão, no máximo três perguntas, a mais bloqueante primeiro.
+`Preciso de você: nenhuma` não abre formulário e o ciclo segue. Se você só pede o status e não há decisão pendente, aparece só o cartão.
+
+Toda parada que espera resposta abre, no mesmo turno, o formulário de perguntas do Cursor. As alternativas ficam nele, não no texto do cartão. São no máximo três, a mais bloqueante primeiro. O campo livre serve para uma resposta que não estava na lista. Sem alternativa real, as opções são escrever a resposta nesse campo ou manter bloqueado. Se você ainda não souber, nada é inventado no seu lugar.
+
+No fim da função, o formulário oferece Seguir e Parar. Um problema descrito no campo livre não avança a função. Risco alto pede Aceito o risco ou Não aceito. Depois de uma análise, Seguir no caminho completo ou Parar. Com a unidade aprovada, Encerrar esta conversa ou Continuar nesta conversa sem abrir a próxima unidade.
 
 ## Onde fica cada coisa
 
@@ -103,25 +107,13 @@ Documento e memória de um projeto ficam no `.cursor` desse projeto, nunca em `~
 - `.cursor/decisoes/` — decisão técnica
 - `.cursor/rules/` e `.cursor/skills/` — rule ou skill só daquele projeto
 
-Sem `.cursor/context/projeto.md`, o orquestrador pergunta antes de criar essa estrutura.
+Sem `.cursor/context/projeto.md`, o orquestrador para e pergunta no formulário antes de criar essa estrutura.
 
 ## Rule ou skill
 
-Depois de uma correção sua, ou de uma decisão sobre como trabalhar, o chat pergunta uma vez:
+Depois de uma correção sua, ou de uma decisão sobre como trabalhar, o chat pergunta uma vez, no formulário: isto pode virar artefato permanente? As opções são rule só neste projeto, rule em todos os projetos, skill só neste projeto, skill em todos os projetos, ou Não. O campo livre não cria arquivo. A escolha fica registrada pelo texto da opção.
 
-```text
-Isto que você acabou de decidir pode virar artefato permanente?
-
-1. Rule só neste projeto — .cursor/rules/
-2. Rule em todos os projetos — ~/.cursor/rules/
-3. Skill só neste projeto — .cursor/skills/
-4. Skill em todos os projetos — ~/.cursor/skills/
-5. Não
-
-Responda com o número. Se for 1 a 4, eu escrevo o arquivo e te devolvo o caminho.
-```
-
-Rule é uma ordem curta, carregada sempre. Skill é um procedimento aberto só quando a situação pede. Fato do produto vai para `.cursor/requisitos/` e não entra nessa pergunta. Sem o número, nada é criado. A mesma decisão não é perguntada de novo.
+Rule é uma ordem curta, carregada sempre. Skill é um procedimento aberto só quando a situação pede. Fato do produto vai para `.cursor/requisitos/` e não entra nessa pergunta. A mesma decisão não é perguntada de novo.
 
 Controle novo no harness só entra depois de uma falha real e de um sim nessa pergunta. Quando um papel, status, caminho, gatilho ou pasta mudar, este guia muda na mesma edição.
 

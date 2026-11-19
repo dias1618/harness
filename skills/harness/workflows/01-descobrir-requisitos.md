@@ -14,9 +14,9 @@ Não leia o repositório inteiro.
 
 ## 2. Perguntar
 
-Se faltar ator, regra testável, exceção ou integração: pare com até 3 perguntas, a mais bloqueante primeiro. Grave `BLOQUEADO` em `.cursor/memoria/estado.md`. Não preencha lacuna com suposição.
+Se faltar ator, regra testável, exceção ou integração: grave até 3 perguntas em `.cursor/memoria/estado.md`, a mais bloqueante primeiro, no formato de Perguntas abertas do [modelo](../templates/estado.md). Grave `BLOQUEADO`. Não invente alternativa de negócio. Sem alternativa real, deixe `opcoes` vazio. Não escreva as alternativas no cartão. O agente do chat abre o formulário.
 
-Resposta da pessoa vira regra testável em `.cursor/requisitos/REQ-XXX.md` ([requisito.md](../templates/requisito.md)). Não deixe a decisão só na análise.
+Resposta no campo livre vira regra testável em `.cursor/requisitos/REQ-XXX.md` ([requisito.md](../templates/requisito.md)). `Ainda não sei — manter bloqueado` permanece `BLOQUEADO`. Não deixe a decisão só na análise.
 
 ## 3. Contrato técnico
 
@@ -30,7 +30,7 @@ Limite novo que valha para várias IUs vira ADR em `.cursor/decisoes/ADR/` ([dec
 
 - `PRONTO_PARA_TESTES` — negócio e contrato bastam para o tester. Se houver tela, o designer ainda precisa do contrato visual antes do tester.
 - `BLOQUEADO` — pergunta aberta ou ADR pendente.
-- Risco ALTO: peça aceite explícito antes do tester.
+- Risco ALTO: grave a pergunta com opções `Aceito o risco | Não aceito`. O pai abre o formulário antes do tester.
 
 ## 5. Devolução
 
