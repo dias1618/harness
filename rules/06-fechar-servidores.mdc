@@ -1,0 +1,8 @@
+---
+description: Encerra instâncias e servidores a cada parada do harness
+alwaysApply: true
+---
+
+# Fechar servidores a cada ciclo
+
+Sempre que o harness parar para pedir uma intervenção ou uma resposta, o agente encerra todas as instâncias e servidores abertos naquele ciclo — Java, Flutter, Next, Node ou qualquer outra tecnologia — para não acumular processo na memória.

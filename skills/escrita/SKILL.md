@@ -28,7 +28,15 @@ Quando o pedido for arrumar um texto que já está pronto, não faça essa quart
 
 ## Leitor
 
-Escreva para o público da primeira rodada. Se essa pessoa já domina o ofício, deixe de fora a aula do que ela sabe e conte a decisão, o contexto em que ela vale e, se o texto já apontava, o link da documentação oficial. O didático está em encadear o motivo, não em reexplicar o básico.
+Escreva para o público da primeira rodada. Se essa pessoa já domina o ofício, não reensine o ofício. Conte a decisão, o contexto em que ela vale e, quando o capítulo apresenta um assunto, o que ele é, para que serve e qual ferramenta o guia adota. O didático está em encadear o motivo. O procedimento fica no manual ou na especificação.
+
+## Introdução de um assunto
+
+Quando o capítulo apresenta um assunto, o trabalho dele é a explicação, no sentido do [Diátaxis](https://diataxis.fr/explanation/): o leitor sai sabendo do que se trata, para que aquilo serve e qual ferramenta este guia adota. A explicação responde a pergunta “pode me contar sobre…?”. Ela não é tutorial, não é passo a passo e não é a ficha da máquina. Parâmetro, ciclo de vida e comando ficam no manual oficial ou na especificação, no ponto em que o leitor for querer esse detalhe.
+
+Abra pelo que a coisa é e pelo trabalho que ela tira da frente da pessoa, com uma situação que o leitor reconhece. Em seguida apresente a ferramenta escolhida: o que ela é e por que este guia a usa. O [curso de escrita técnica do Google](https://developers.google.com/tech-writing/one/documents) lembra que muita gente só lê o começo, então esse começo já entrega o assunto. A introdução prefere o uso comum e a clareza, e deixa a completude para o documento que descreve a máquina, como na [orientação de documento conceitual do WebRTC](https://webrtc.googlesource.com/src/+/HEAD/g3doc/how_to_write_documentation.md).
+
+O leitor pleno não dispensa essa camada. Ele já programa. O que fica de fora é a aula do ofício que ele já tem e o close da configuração. O que entra é o assunto deste capítulo, amarrado o bastante para a especificação fazer sentido depois.
 
 ## Parágrafo
 
@@ -47,6 +55,7 @@ Lista só quando os itens são um catálogo de verdade, como opções de bibliot
 - [Cleaning Up AI Prose](https://thinkwright.ai/editorial-standards): o parágrafo desenvolve um argumento, e frase longa convive com frase curta.
 - [AI-Writing Don'ts](https://marin.readthedocs.io/en/latest/dev-guide/writing-style/ai-writing-donts/): corte o contraste de estoque.
 - [Deslopping AI Prose](https://www.anaconda.com/blog/deslopping-ai-prose): una as frases picadas e corte o fecho vazio.
+- [Explanation, no Diátaxis](https://diataxis.fr/explanation/): a introdução explica o assunto e para no limite em que o texto vira instrução ou ficha técnica.
 
 Não aplique limite de vinte palavras por frase.
 
