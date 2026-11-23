@@ -28,6 +28,8 @@ Rode cada comando da seção Validação da IU. Só esses. Suíte e build não e
 
 Não afirme merge, publicação nem implantação. Essas operações só contam depois de executadas.
 
+Depois do sensor, derrube servidor ou watcher que tenha subido para o comando, salvo a IU marcar `servidor_persiste_ate_teste: sim` na seção Validação. Nesse caso, registre em `estado.md` em **Processos do ciclo** (porta, comando, encerrar no portão `AGUARDANDO_TESTE`). Sem a exceção, não deixe processo do agente rodando após o sensor.
+
 ## 4. Handoff
 
 Grave `.cursor/tecnico/handoffs/IU-XXX-handoff.md` ([handoff-desenvolvedor.md](../templates/handoff-desenvolvedor.md)). Marque só o critério da função atual. Não marque critério de função futura. Não use `VALIDADO` enquanto a pessoa não tiver testado a última função.

@@ -36,11 +36,13 @@ O subagente grava o artefato no `.cursor/` do projeto e devolve só o cartão em
 
 ## Portões
 
+Antes de cada portão que espera resposta, encerre processos do ciclo (rule `06-fechar-servidores`): servidores e jobs em background que o agente iniciou; alinhe **Processos do ciclo** em `estado.md` com `Nenhum`, salvo exceção na IU (ver workflow [03](workflows/03-implementar-tdd.md)).
+
 Pare e fale com a pessoa quando faltar regra de negócio, o risco da IU for ALTO sem aceite, o RED for inválido, a revisão chegar à terceira rodada, ou uma função tiver sido entregue. Sem commit e sem pergunta de Git. A próxima função espera Seguir. Na última, Seguir chama o reviewer e, se houver tela, o designer visual.
 
-Só o agente do chat abre o formulário AskQuestion, no mesmo turno do cartão. Não repita as opções na mensagem. `Preciso de você: nenhuma` não abre formulário. Pedido de status sem decisão pendente mostra só o cartão. Até três perguntas, a mais bloqueante primeiro, só se forem independentes. A recomendada, se existir, vai na frente com `(Recommended)`.
+Só o agente do chat abre o formulário AskQuestion, no mesmo turno do cartão. O `prompt` de cada pergunta inclui o texto acionável de `Preciso de você` do cartão (e o de cada item em `Perguntas abertas`, se couber), para a pessoa saber o que fazer antes de escolher. Não repita só as opções na mensagem do chat. `Preciso de você: nenhuma` não abre formulário. Pedido de status sem decisão pendente mostra só o cartão. Até três perguntas, a mais bloqueante primeiro, só se forem independentes. A recomendada, se existir, vai na frente com `(Recommended)`.
 
-O papel grava a pergunta em `estado.md` e devolve o cartão. O pai lê Perguntas abertas e monta o formulário. Campo livre é a resposta da pessoa, não um palpite do agente. Sem alternativa real, as opções são `A resposta está no campo livre` e `Ainda não sei — manter bloqueado`. Alternativa que o papel já encontrou entra no lugar desse par. O texto livre, quando for fato do produto, vira regra em `.cursor/requisitos/`. `Ainda não sei — manter bloqueado` deixa o status em `BLOQUEADO`.
+O papel grava a pergunta em `estado.md` e devolve o cartão. O pai lê `Preciso de você`, Perguntas abertas e monta o formulário com essas instruções no `prompt`. Campo livre é a resposta da pessoa, não um palpite do agente. Sem alternativa real, as opções são `A resposta está no campo livre` e `Ainda não sei — manter bloqueado`. Alternativa que o papel já encontrou entra no lugar desse par. O texto livre, quando for fato do produto, vira regra em `.cursor/requisitos/`. `Ainda não sei — manter bloqueado` deixa o status em `BLOQUEADO`.
 
 - Fim de função: o cartão diz o que abrir e o que experimentar. Opções: Seguir, Parar. Problema no campo livre não avança a função.
 - Risco alto: Aceito o risco, Não aceito.

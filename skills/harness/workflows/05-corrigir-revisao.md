@@ -24,7 +24,7 @@ Não altere teste do tester. Sem refatoração fora da correção. Se a correç�
 
 ## 3. Sensor
 
-Rode de novo os comandos da seção Validação da IU. Passou: uma linha `PASS`. Falhou: corrija com o erro, sem chamar a pessoa. Não rodou: `NAO_EXECUTADO`. Isso não aprova e não muda o estado para `VALIDADO`.
+Rode de novo os comandos da seção Validação da IU. Passou: uma linha `PASS`. Falhou: corrija com o erro, sem chamar a pessoa. Não rodou: `NAO_EXECUTADO`. Isso não aprova e não muda o estado para `VALIDADO`. Depois do sensor, mesmas regras de encerramento de processos do [03](03-implementar-tdd.md) §3.
 
 ## 4. Handoff
 

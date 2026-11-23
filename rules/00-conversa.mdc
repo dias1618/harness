@@ -26,7 +26,7 @@ Resto: [um caminho]
 
 `Preciso de você: nenhuma` não abre formulário e o ciclo segue. Pedido de status sem decisão pendente mostra só o cartão.
 
-Quando a parada espera resposta, o agente do chat abre o formulário AskQuestion no mesmo turno. Não repete as opções na mensagem. Até três perguntas, a mais bloqueante primeiro, e só se forem independentes. Papel não abre formulário: grava a pergunta no estado e devolve o cartão.
+Quando a parada espera resposta, o agente do chat abre o formulário AskQuestion no mesmo turno. O `prompt` de cada pergunta do formulário traz o que fazer — o mesmo texto acionável da linha `Preciso de você` do cartão daquele turno (e, se houver, de `Perguntas abertas` em `estado.md`), antes da escolha. Assim a pessoa vê as instruções no formulário sem abrir `estado.md`. Não repita só as opções na mensagem do chat; o cartão e `Último cartão` em `estado.md` continuam iguais. Até três perguntas, a mais bloqueante primeiro, e só se forem independentes. Papel não abre formulário: grava a pergunta no estado e devolve o cartão.
 
 ## Sessão
 

@@ -28,4 +28,6 @@ Bloqueia tela inutilizável: transbordo, ação inalcançável, texto ilegível,
 
 Veredito no mesmo arquivo de contrato, seção Revisão: `APROVADO` ou `AJUSTE_VISUAL` com os itens CRÍTICO ou ALTO. `AJUSTE_VISUAL` conta como rodada de correção, no máximo duas; na terceira, pare para a pessoa.
 
+Antes do cartão: desbloqueie e feche a aba de automação do browser MCP que usou na revisão; não deixe browser lock aberto.
+
 Devolva só o cartão.

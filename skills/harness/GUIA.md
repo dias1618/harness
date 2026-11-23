@@ -85,9 +85,24 @@ Resto: [um caminho]
 
 `Preciso de você: nenhuma` não abre formulário e o ciclo segue. Se você só pede o status e não há decisão pendente, aparece só o cartão.
 
-Toda parada que espera resposta abre, no mesmo turno, o formulário de perguntas do Cursor. As alternativas ficam nele, não no texto do cartão. São no máximo três, a mais bloqueante primeiro. O campo livre serve para uma resposta que não estava na lista. Sem alternativa real, as opções são escrever a resposta nesse campo ou manter bloqueado. Se você ainda não souber, nada é inventado no seu lugar.
+Toda parada que espera resposta abre, no mesmo turno, o formulário de perguntas do Cursor. O enunciado de cada pergunta no formulário repete o que você precisa fazer — o mesmo sentido da linha **Preciso de você** do cartão e do que está em `estado.md` — para você não depender só do arquivo de estado. As alternativas ficam nele, não no texto do cartão. São no máximo três, a mais bloqueante primeiro. O campo livre serve para uma resposta que não estava na lista. Sem alternativa real, as opções são escrever a resposta nesse campo ou manter bloqueado. Se você ainda não souber, nada é inventado no seu lugar.
 
 No fim da função, o formulário oferece Seguir e Parar. Um problema descrito no campo livre não avança a função. Risco alto pede Aceito o risco ou Não aceito. Depois de uma análise, Seguir no caminho completo ou Parar. Com a unidade aprovada, Encerrar esta conversa ou Continuar nesta conversa sem abrir a próxima unidade.
+
+## Memória na máquina
+
+RAM sobe de dois jeitos: processos que o agente deixa no sistema (Node, Java, Flutter, servidores) e o próprio Cursor (chat longo, subagentes, MCP, browser na revisão visual). O harness manda encerrar processos do ciclo em cada portão (rule `06-fechar-servidores`) e registrar exceções em **Processos do ciclo** no `estado.md`.
+
+| Momento | Ação sua |
+|---------|----------|
+| `APROVADO` na IU | Prefira **Encerrar esta conversa**; retome com `#harness` e `estado.md` |
+| Conversa longa fora do ciclo | Chat novo; não arrastar IUs já fechadas |
+| Projetos grandes | `.cursorignore` em `node_modules/`, `dist/`, `.next/` e artefatos de build |
+| MCP que o ciclo não usa | Desligar em Customize → MCPs |
+| Revisão com tela e máquina lenta | Peça revisão **sequencial** (reviewer, depois designer visual) em vez de paralela |
+| Diagnóstico | *Developer: Open Process Explorer* no Cursor; `pgrep -af 'node|java|flutter'` após portão |
+
+O architect prefere comandos one-shot na IU; servidor até o teste manual só com `servidor_persiste_ate_teste: sim` e comando mínimo documentado.
 
 ## Onde fica cada coisa
 

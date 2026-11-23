@@ -54,7 +54,7 @@ Uma fase por vez, com contexto mínimo:
 - Status e rodada.
 - Proibições: developer não edita teste do tester; architect, designer e reviewer não editam código de produção; reviewer e designer visual não recebem o resumo do developer como evidência.
 
-Não cole o corpo dos documentos nem recapitule o chat. Espere o cartão. `Preciso de você: nenhuma` segue e não abre formulário. Função entregue não é `nenhuma`: o cartão diz o que abrir e o que experimentar, e o formulário abre no mesmo turno. Qualquer pergunta vai para a pessoa. Pergunta aberta interrompe a delegação. Um papel não responde dúvida de outro e não abre o formulário. O pai lê Perguntas abertas em `estado.md` e monta o AskQuestion.
+Não cole o corpo dos documentos nem recapitule o chat. Mantenha **Processos do ciclo** em `estado.md` alinhado ao que o agente deixou rodando (ou `Nenhum`). Espere o cartão. `Preciso de você: nenhuma` segue e não abre formulário. Função entregue não é `nenhuma`: o cartão diz o que abrir e o que experimentar, e o formulário abre no mesmo turno. Qualquer pergunta vai para a pessoa. Pergunta aberta interrompe a delegação. Um papel não responde dúvida de outro e não abre o formulário. O pai lê `Preciso de você` do cartão e Perguntas abertas em `estado.md` e monta o AskQuestion; cada `prompt` repete as instruções acionáveis antes das opções.
 
 ## 5. Funções
 
@@ -72,11 +72,13 @@ Architect grava nota curta em `.cursor/tecnico/analises/` com [relatorio-analise
 
 ## 7. Revisão com tela
 
-Depois que a pessoa testou a última função e escolheu Seguir, lance reviewer e designer visual juntos. Junte os vereditos. CRÍTICO ou ALTO de implementação devolve ao developer. Regra, critério, plano ou expectativa de teste voltam ao papel da causa. Tela sem layout moderno, agradável, minimalista e profissional bloqueia. Mudança além disso a pessoa pede na revisão dela.
+Depois que a pessoa testou a última função e escolheu Seguir, lance reviewer e designer visual juntos. Junte os vereditos. Se a máquina estiver no limite de memória e a pessoa pedir, delegue em sequência (reviewer primeiro, designer visual depois), em vez de paralelo. CRÍTICO ou ALTO de implementação devolve ao developer. Regra, critério, plano ou expectativa de teste voltam ao papel da causa. Tela sem layout moderno, agradável, minimalista e profissional bloqueia. Mudança além disso a pessoa pede na revisão dela.
 
 ## 8. Parar
 
-Cada parada que espera resposta mostra o cartão e, no mesmo turno, o formulário AskQuestion. Só o agente do chat abre. Não repita as opções na mensagem. Até três perguntas, a mais bloqueante primeiro, só se forem independentes. A recomendada, se existir, vai na frente com `(Recommended)`. Pedido de status sem decisão pendente mostra só o cartão.
+Antes do cartão ou do formulário que espera resposta: encerre servidores e jobs em background que o agente abriu neste ciclo (confira terminais do turno; mate só o que o agente iniciou, não o Cursor nem processos da pessoa). Se `estado.md` listar algo em **Processos do ciclo**, encerre e deixe `Nenhum`, salvo `servidor_persiste_ate_teste: sim` na IU — aí encerre no portão mesmo assim e o cartão manda a pessoa subir com o comando mínimo da Validação, sem processo órfão do agente.
+
+Cada parada que espera resposta mostra o cartão e, no mesmo turno, o formulário AskQuestion. Só o agente do chat abre. Cada `prompt` do formulário carrega o que fazer — em geral a linha `Preciso de você` do cartão — e depois pede a escolha. Não repita só as opções na mensagem do chat. Até três perguntas, a mais bloqueante primeiro, só se forem independentes. A recomendada, se existir, vai na frente com `(Recommended)`. Pedido de status sem decisão pendente mostra só o cartão.
 
 Campo livre é a resposta da pessoa. Sem alternativa real, as opções são `A resposta está no campo livre` e `Ainda não sei — manter bloqueado`. Alternativa que o papel já encontrou entra no lugar desse par. Texto livre que for fato do produto vira regra em `.cursor/requisitos/`. `Ainda não sei — manter bloqueado` deixa `BLOQUEADO`.
 

@@ -64,6 +64,10 @@ Cada bloco espelha um item da lista em `estado.md`. Um ciclo tester → develope
 
 ## Validação
 
+Preferir comandos one-shot (test, build). Servidor `dev`/`watch` só se não houver alternativa.
+
+`servidor_persiste_ate_teste`: não | sim — se `sim`, comando mínimo para a pessoa no portão `AGUARDANDO_TESTE` (o agente não deixa processo órfão).
+
 Obrigatório em mudança de código:
 
 - `[testes novos]` — esperado: sucesso

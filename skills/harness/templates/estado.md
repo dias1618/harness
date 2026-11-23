@@ -27,7 +27,7 @@ Nenhuma
 ou, até três, a mais bloqueante primeiro:
 
 - id: [curto]
-  prompt: [a pergunta, autocontida]
+  prompt: [pergunta autocontida; o agente do chat também coloca isso no AskQuestion, junto com Preciso de você do cartão quando for o caso]
   opcoes: [alternativas reais separadas por " | ", ou vazio]
   multipla: nao
 
@@ -51,6 +51,14 @@ Resto:
 Mesmos nomes e ordem da seção **Funções por ciclo** da IU.
 
 - [ ] [comportamento que a pessoa usa no sistema]
+
+## Processos do ciclo
+
+Nenhum
+
+ou, se o agente deixou servidor até o portão (`servidor_persiste_ate_teste: sim` na IU):
+
+- [porta] — [comando] — encerrar no portão AGUARDANDO_TESTE
 
 ## Decisões de trabalho já perguntadas
 

@@ -30,6 +30,10 @@ Só afrouxe outra regra quando o requisito não funcional pedir desempenho. Sem 
 
 Use o que o repositório já usa, na versão que o manifesto fixa. Técnica nova só se essa versão já a tem. Não importe o idiom de outra linguagem nem de uma versão que o projeto não roda.
 
+## Sensor e processos
+
+Prefira comandos **one-shot** na seção Validação (`test`, `build`, compilação). Evite `dev`, `watch` ou servidor que fique rodando depois do sensor, salvo `servidor_persiste_ate_teste: sim` na IU. Após o sensor, derrube o que tiver subido; se a IU exigir persistência até o teste da pessoa, registre em **Processos do ciclo** em `estado.md`.
+
 ## O que tem de aparecer no artefato
 
 - Handoff com risco residual. Se não houver, escreva Nenhum.
