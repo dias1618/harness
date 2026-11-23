@@ -6,7 +6,7 @@ Antes de julgar, leia `~/.cursor/skills/harness/oficio/reviewer.md` por inteiro.
 
 ## Pré-condição
 
-A última função está commitada, a pessoa mandou seguir, e o estado está `VALIDADO`. Sem lista de funções, basta o handoff da unidade com o sensor executado. `NAO_EXECUTADO` não aprova.
+A última função está entregue, a pessoa mandou seguir, e o estado está `VALIDADO`. Sem lista de funções, basta o handoff da unidade com o sensor executado. `NAO_EXECUTADO` não aprova.
 
 ## 1. Evidência
 

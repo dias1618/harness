@@ -23,7 +23,7 @@ Classifique antes de delegar. Na dúvida entre curto e completo, prove que falta
 
 Declare em `estado.md`: curto ou completo.
 
-- **Curto.** REQ e IU já cobrem a correção, sem regra nova e sem tela. Delegue só o developer ([03](workflows/03-implementar-tdd.md)). Depois do commit, pare para a pessoa testar. Reviewer só se a pessoa pedir ou se a IU não tiver comando de validação, e só depois desse teste.
+- **Curto.** REQ e IU já cobrem a correção, sem regra nova e sem tela. Delegue só o developer ([03](workflows/03-implementar-tdd.md)). Depois da função, pare para a pessoa testar. Sem commit e sem pergunta de Git. Reviewer só se a pessoa pedir ou se a IU não tiver comando de validação, e só depois desse teste.
 - **Completo.** [00](workflows/00-orquestrador.md). Análise primeiro se houver dúvida. Com tela, [06](workflows/06-designer.md) antes do tester. Uma função por vez. A revisão visual e o reviewer entram só depois da última função, quando a pessoa escolher Seguir.
 
 Com `APROVADO` na IU, pare e abra o formulário da conversa nova (ver `00-conversa`).
@@ -32,11 +32,11 @@ Com `APROVADO` na IU, pare e abra o formulário da conversa nova (ver `00-conver
 
 Passe ao subagente apenas: pedido em uma frase; caminhos de `estado.md`, REQ, IU, plano, handoff ou revisão; status; `função atual`; rodada; proibições. Sem resumo do chat, sem corpo de REQ, IU, handoff ou diff.
 
-O subagente grava o artefato no `.cursor/` do projeto e devolve só o cartão em [templates/cartao-humano.md](templates/cartao-humano.md). Se `Preciso de você` for `nenhuma`, continue. Função commitada não é `nenhuma`: pare, mostre o cartão com o que abrir e o que experimentar, e abra o formulário. Pergunta aberta interrompe a delegação. Um papel não responde dúvida de outro e não abre o formulário.
+O subagente grava o artefato no `.cursor/` do projeto e devolve só o cartão em [templates/cartao-humano.md](templates/cartao-humano.md). Se `Preciso de você` for `nenhuma`, continue. Função entregue não é `nenhuma`: pare, mostre o cartão com o que abrir e o que experimentar, e abra o formulário. Sem commit e sem pergunta de Git. Pergunta aberta interrompe a delegação. Um papel não responde dúvida de outro e não abre o formulário.
 
 ## Portões
 
-Pare e fale com a pessoa quando faltar regra de negócio, o risco da IU for ALTO sem aceite, o RED for inválido, a revisão chegar à terceira rodada, ou uma função tiver sido commitada. A próxima função espera Seguir. Na última, Seguir chama o reviewer e, se houver tela, o designer visual.
+Pare e fale com a pessoa quando faltar regra de negócio, o risco da IU for ALTO sem aceite, o RED for inválido, a revisão chegar à terceira rodada, ou uma função tiver sido entregue. Sem commit e sem pergunta de Git. A próxima função espera Seguir. Na última, Seguir chama o reviewer e, se houver tela, o designer visual.
 
 Só o agente do chat abre o formulário AskQuestion, no mesmo turno do cartão. Não repita as opções na mensagem. `Preciso de você: nenhuma` não abre formulário. Pedido de status sem decisão pendente mostra só o cartão. Até três perguntas, a mais bloqueante primeiro, só se forem independentes. A recomendada, se existir, vai na frente com `(Recommended)`.
 

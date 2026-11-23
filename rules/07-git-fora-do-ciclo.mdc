@@ -1,0 +1,8 @@
+---
+description: O harness não mexe no Git; a pessoa faz isso por fora do ciclo
+alwaysApply: true
+---
+
+# Git fora do ciclo
+
+O harness não commita nem faz qualquer ação de Git no projeto, e não pergunta se é para commitar. A pessoa faz essas ações por fora do ciclo.

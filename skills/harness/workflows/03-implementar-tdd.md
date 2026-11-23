@@ -16,7 +16,7 @@ Leia `estado.md` e o bloco da **função atual** em **Funções por ciclo** na I
 
 A solução mais simples que respeita a função atual e faz o teste dela passar. Depois, clareza sem mudar comportamento. Não comece a próxima função.
 
-Proibido editar teste do tester, ampliar escopo ou mudar arquitetura fora da IU. Se precisar, pare em `BLOQUEADO`. Não commite: o orquestrador commita a função.
+Proibido editar teste do tester, ampliar escopo ou mudar arquitetura fora da IU. Se precisar, pare em `BLOQUEADO`. Não commite e não faça ação de Git. O ciclo também não, e não pergunta.
 
 ## 3. Sensor
 

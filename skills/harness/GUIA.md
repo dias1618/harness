@@ -40,7 +40,7 @@ O reviewer não refaz esses ofícios. No diff, confere se eles apareceram, e só
 
 ## Dois caminhos
 
-Curto: a correção já está coberta pelo requisito e pela unidade, sem regra nova e sem tela. Só o developer, mais o comando de validação. Depois do commit, pare para você testar. O reviewer entra se você pedir ou se essa unidade não tiver comando, e só depois desse teste.
+Curto: a correção já está coberta pelo requisito e pela unidade, sem regra nova e sem tela. Só o developer, mais o comando de validação. Depois da função, pare para você testar. O harness não commita, não faz ação de Git e não pergunta. O reviewer entra se você pedir ou se essa unidade não tiver comando, e só depois desse teste.
 
 Completo: regra nova, unidade nova ou comportamento ainda sem contrato.
 
@@ -49,7 +49,7 @@ Completo: regra nova, unidade nova ou comportamento ainda sem contrato.
 3. O orquestrador grava a lista de funções e trata uma por vez.
 4. Tester deixa os testes dessa função falhando pelo motivo certo.
 5. Developer implementa essa função e roda o comando.
-6. O orquestrador commita a função e para para você testar o sistema.
+6. O orquestrador para para você testar o sistema. O Git fica com você, fora do ciclo.
 7. Na última função, quando você escolher Seguir, o reviewer julga. Se há tela, o designer revisa o render ao mesmo tempo.
 8. Defeito de implementação, crítico ou alto, volta ao developer, no máximo duas vezes. Regra, plano ou teste voltam ao papel da causa. Na terceira, para em você ou no architect.
 
@@ -62,7 +62,7 @@ Em dúvida entre analisar e implementar, a análise vem primeiro. Uma unidade po
 | `BLOQUEADO` | Falta decisão sua, o risco é alto ou a spec mudou | Você, ou o architect |
 | `PRONTO_PARA_TESTES` | Requisito e unidade fechados. Com tela, o contrato visual também | Tester |
 | `RED` | Testes escritos e falhando como esperado | Developer |
-| `AGUARDANDO_TESTE` | A função foi commitada | Você testa o sistema. Com Seguir, a próxima função ou, na última, o reviewer |
+| `AGUARDANDO_TESTE` | A função foi entregue | Você testa o sistema. Com Seguir, a próxima função ou, na última, o reviewer |
 | `VALIDADO` | A última função já foi testada por você e você escolheu Seguir. Sem lista de funções, o comando da unidade passou | Reviewer (e designer, se há tela) |
 | `ALTERACOES_NECESSARIAS` | Crítico ou alto, rodada 1 ou 2 | Developer se for defeito. Tester ou architect se a causa for outra |
 | `APROVADO` | Entrega aceita. O sensor foi executado e a revisão não tem achado impeditivo | Ninguém |
@@ -74,7 +74,7 @@ A aprovação vale para a revisão gravada do requisito, da unidade e do plano d
 
 ## Quando o chat para
 
-Você recebe este cartão quando falta uma decisão, o risco é alto, a revisão estourou, uma função foi commitada, ou quando você pede o status. Fora disso, fase que passou só atualiza o estado. No fim da função, o cartão diz o que abrir e o que experimentar.
+Você recebe este cartão quando falta uma decisão, o risco é alto, a revisão estourou, uma função foi entregue, ou quando você pede o status. O harness não commita e não pergunta. Fora disso, fase que passou só atualiza o estado. No fim da função, o cartão diz o que abrir e o que experimentar.
 
 ```text
 Feito: [uma frase]

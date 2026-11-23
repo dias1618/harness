@@ -54,17 +54,17 @@ Uma fase por vez, com contexto mínimo:
 - Status e rodada.
 - Proibições: developer não edita teste do tester; architect, designer e reviewer não editam código de produção; reviewer e designer visual não recebem o resumo do developer como evidência.
 
-Não cole o corpo dos documentos nem recapitule o chat. Espere o cartão. `Preciso de você: nenhuma` segue e não abre formulário. Função commitada não é `nenhuma`: o cartão diz o que abrir e o que experimentar, e o formulário abre no mesmo turno. Qualquer pergunta vai para a pessoa. Pergunta aberta interrompe a delegação. Um papel não responde dúvida de outro e não abre o formulário. O pai lê Perguntas abertas em `estado.md` e monta o AskQuestion.
+Não cole o corpo dos documentos nem recapitule o chat. Espere o cartão. `Preciso de você: nenhuma` segue e não abre formulário. Função entregue não é `nenhuma`: o cartão diz o que abrir e o que experimentar, e o formulário abre no mesmo turno. Qualquer pergunta vai para a pessoa. Pergunta aberta interrompe a delegação. Um papel não responde dúvida de outro e não abre o formulário. O pai lê Perguntas abertas em `estado.md` e monta o AskQuestion.
 
 ## 5. Funções
 
 Quando REQ, IU e, se houver tela, o contrato visual existem, grave em `estado.md` a lista ordenada. Cada item é um comportamento que a pessoa usa no sistema. Não reabra o requisito.
 
-Uma função por ciclo: tester, developer, commit do orquestrador, parada. O commit segue o estilo do repositório e leva só os arquivos dessa função. O cartão diz o que abrir e o que experimentar. O formulário oferece Seguir e Parar. Problema no campo livre não avança a função. A próxima função espera Seguir.
+Uma função por ciclo: tester, developer, parada. O harness não commita, não faz ação de Git e não pergunta. O cartão diz o que abrir e o que experimentar. O formulário oferece Seguir e Parar. Problema no campo livre não avança a função. A próxima função espera Seguir.
 
 Reviewer e, se houver tela, designer visual só depois da última função, quando a pessoa escolher Seguir. Architect e o designer de contrato não refazem documento.
 
-No caminho curto, o mesmo portão: depois do commit, pare para o teste no sistema.
+No caminho curto, o mesmo portão: depois da função, pare para o teste no sistema. Sem commit e sem pergunta de Git.
 
 ## 6. Análise
 
@@ -85,7 +85,7 @@ Campo livre é a resposta da pessoa. Sem alternativa real, as opções são `A r
 - Risco ALTO sem aceite. Opções: Aceito o risco, Não aceito.
 - RED inválido.
 - Terceira rodada de `ALTERACOES_NECESSARIAS`.
-- Função commitada. O cartão diz o que abrir e o que experimentar. Opções: Seguir, Parar. Problema no campo livre não avança a função.
+- Função entregue. Sem commit e sem pergunta de Git. O cartão diz o que abrir e o que experimentar. Opções: Seguir, Parar. Problema no campo livre não avança a função.
 - Conflito entre REQ, IU e o pedido. Não infira.
 - Pergunta aberta. Um papel não responde dúvida de outro.
 - Infraestrutura que impede a verificação. Grave `BLOQUEADO`. A tarefa não fica verificada.
