@@ -27,7 +27,7 @@ Nenhuma
 ou, até três, a mais bloqueante primeiro:
 
 - id: [curto]
-  prompt: [pergunta autocontida; o agente do chat também coloca isso no AskQuestion, junto com Preciso de você do cartão quando for o caso]
+  prompt: [pergunta autocontida; o agente do chat também coloca isso no AskQuestion, depois de Alterado nesta rodada e Preciso de você, quando for o caso]
   opcoes: [alternativas reais separadas por " | ", ou vazio]
   multipla: nao
 
@@ -38,6 +38,8 @@ ou, até três, a mais bloqueante primeiro:
 ## Último cartão
 
 Feito:
+Alterado nesta rodada:
+- [comportamento ou efeito visível que mudou; caminho só se ajudar no teste]
 Preciso de você:
 Próximo:
 Resto:

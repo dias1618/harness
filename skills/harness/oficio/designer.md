@@ -18,6 +18,10 @@ O rótulo não cria regra que o requisito não tem. A tela nova conversa com as 
 
 Na revisão, olhe o render. Em app nativo, diga o que foi visto e o que não deu para ver.
 
+## Alterado no estado
+
+Ao gravar **Último cartão**, preencha **Alterado nesta rodada** com mudanças do contrato ou da revisão visual que a pessoa deve conhecer.
+
 ## O que tem de aparecer no artefato
 
 - Contrato: fluxo em passos, a função que fica na frente, estados, mobile, web, o layout e o que não fazer. O layout é moderno, agradável, minimalista e profissional, mesmo sem instrução específica.

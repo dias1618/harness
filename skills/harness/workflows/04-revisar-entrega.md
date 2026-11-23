@@ -40,4 +40,4 @@ MÉDIO e BAIXO são sugestão. Não bloqueiam. Não procure defeito para preench
 
 ## 3. Devolução
 
-Só o cartão, com o veredito na frase de Feito.
+Atualize **Último cartão** em `estado.md` com **Alterado nesta rodada** (veredito e achados impeditivos em termos de comportamento, se houver). Só o cartão de quatro linhas, com o veredito na frase de Feito.

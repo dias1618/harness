@@ -26,7 +26,7 @@ Resto: [um caminho]
 
 `Preciso de você: nenhuma` não abre formulário e o ciclo segue. Pedido de status sem decisão pendente mostra só o cartão.
 
-Quando a parada espera resposta, o agente do chat abre o formulário AskQuestion no mesmo turno. O `prompt` de cada pergunta do formulário traz o que fazer — o mesmo texto acionável da linha `Preciso de você` do cartão daquele turno (e, se houver, de `Perguntas abertas` em `estado.md`), antes da escolha. Assim a pessoa vê as instruções no formulário sem abrir `estado.md`. Não repita só as opções na mensagem do chat; o cartão e `Último cartão` em `estado.md` continuam iguais. Até três perguntas, a mais bloqueante primeiro, e só se forem independentes. Papel não abre formulário: grava a pergunta no estado e devolve o cartão.
+Quando a parada espera resposta, o agente do chat abre o formulário AskQuestion no mesmo turno. Cada `prompt` é autocontido, nesta ordem: bloco **Alterado nesta rodada** (bullets de `estado.md` em **Último cartão**; se vazio, uma bullet derivada de `Feito:`); bloco **Preciso de você** (linha do cartão daquele turno e, em pergunta aberta, o texto do item); depois a pergunta e as opções. O detalhe das alterações fica só no formulário, não no texto do chat. Não repita só as opções na mensagem do chat; o cartão no chat continua com quatro linhas e `Último cartão` em `estado.md` inclui `Alterado nesta rodada`. Até três perguntas, a mais bloqueante primeiro, e só se forem independentes. Papel não abre formulário: grava a pergunta e `Alterado nesta rodada` no estado e devolve o cartão.
 
 ## Sessão
 
@@ -36,7 +36,7 @@ Com `APROVADO` na IU, o cartão fecha a unidade e o formulário oferece encerrar
 
 Vale com ou sem `#harness`. Uma vez por correção ou decisão de como trabalhar, depois de gravar fato de produto em `.cursor/requisitos/` quando for o caso. Não dispare para preencher requisito de tela, dado ou comportamento do app. Não repita se `estado.md` já registrou a resposta daquela decisão.
 
-Abra o formulário com a pergunta "Isto que você acabou de decidir pode virar artefato permanente?" e estas opções, sem numerá-las no chat:
+Abra o formulário com o bloco **Alterado nesta rodada** (o que mudou neste turno) e em seguida a pergunta "Isto que você acabou de decidir pode virar artefato permanente?", sem numerá-las no chat:
 
 - Rule só neste projeto — .cursor/rules/
 - Rule em todos os projetos — ~/.cursor/rules/

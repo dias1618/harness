@@ -36,6 +36,10 @@ Também registre, quando couber:
 - o que quebra se o contrato mudar
 - idempotência, se houver repetição, retentativa ou fila
 
+## Alterado no estado
+
+Ao gravar **Último cartão** em `estado.md`, preencha **Alterado nesta rodada** com regras e artefatos que mudaram neste turno (REQ, IU, ADR). Sem código de produto, deixe explícito.
+
 ## O que tem de aparecer no artefato
 
 Se não estiver escrito, a decisão não existiu.

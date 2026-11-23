@@ -26,6 +26,10 @@ Cubra a regra importante e o limite dela, não a linha. Caso negativo e fronteir
 
 O teste teria de falhar se a implementação estivesse errada. Sem teste de método privado. Sem teste que só segura o framework. Sem asserção enfraquecida para ficar verde.
 
+## Alterado no estado
+
+Ao gravar `estado.md`, preencha **Alterado nesta rodada**: comportamentos que os testes novos ou alterados passam a cobrir na função atual.
+
 ## O que tem de aparecer no artefato
 
 - Plano: tipo, porquê, regra coberta e o que não será testado.

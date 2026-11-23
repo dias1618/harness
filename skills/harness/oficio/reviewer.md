@@ -15,6 +15,10 @@ Você não refaz o ofício dos outros. Confere se ele apareceu na entrega.
 
 Só crítico ou alto bloqueia. Médio e baixo são sugestão. Teste verde não aprova sozinho. Na terceira rodada, `BLOQUEADO`.
 
+## Alterado no estado
+
+Se gravar `estado.md`, preencha **Alterado nesta rodada** com o veredito e achados impeditivos em comportamento, não o diff.
+
 ## O que tem de aparecer no artefato
 
 - Relatório com veredito, rodada e, se bloquear, o item obrigatório apontando para o diff.

@@ -34,6 +34,10 @@ Use o que o repositório já usa, na versão que o manifesto fixa. Técnica nova
 
 Prefira comandos **one-shot** na seção Validação (`test`, `build`, compilação). Evite `dev`, `watch` ou servidor que fique rodando depois do sensor, salvo `servidor_persiste_ate_teste: sim` na IU. Após o sensor, derrube o que tiver subido; se a IU exigir persistência até o teste da pessoa, registre em **Processos do ciclo** em `estado.md`.
 
+## Alterado no estado
+
+Ao atualizar `estado.md`, preencha **Alterado nesta rodada** em **Último cartão**: 2 a 5 bullets do que a pessoa nota no sistema na função atual (comportamento primeiro). Não cole a lista de arquivos do handoff.
+
 ## O que tem de aparecer no artefato
 
 - Handoff com risco residual. Se não houver, escreva Nenhum.

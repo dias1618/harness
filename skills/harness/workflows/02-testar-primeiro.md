@@ -31,4 +31,4 @@ Sucesso do comando neste passo é problema: o teste da função atual tinha de f
 
 ## 5. Devolução
 
-Cartão mais a recomendação numa linha: `LIBERAR_DESENVOLVEDOR`, `VOLTA_ARQUITETO` ou `BLOQUEADO`.
+Grave em `estado.md` **Alterado nesta rodada** (comportamentos cobertos pelos testes novos ou alterados da função atual). Cartão de quatro linhas mais a recomendação numa linha: `LIBERAR_DESENVOLVEDOR`, `VOLTA_ARQUITETO` ou `BLOQUEADO`.

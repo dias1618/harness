@@ -28,4 +28,4 @@ Rode de novo os comandos da seção Validação da IU. Passou: uma linha `PASS`.
 
 ## 4. Handoff
 
-Novo handoff com a rodada incrementada. Sensor em `PASS`: status `VALIDADO`. Sensor em `NAO_EXECUTADO`: não use `VALIDADO`. Devolva só o cartão. O reviewer olha de novo; com tela, o designer visual também.
+Novo handoff com a rodada incrementada. Sensor em `PASS`: status `VALIDADO`. Sensor em `NAO_EXECUTADO`: não use `VALIDADO`. Em **Último cartão**, grave **Alterado nesta rodada** com o que foi corrigido em comportamento. Devolva só o cartão de quatro linhas. O reviewer olha de novo; com tela, o designer visual também.

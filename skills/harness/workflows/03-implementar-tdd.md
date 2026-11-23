@@ -34,4 +34,4 @@ Depois do sensor, derrube servidor ou watcher que tenha subido para o comando, s
 
 Grave `.cursor/tecnico/handoffs/IU-XXX-handoff.md` ([handoff-desenvolvedor.md](../templates/handoff-desenvolvedor.md)). Marque só o critério da função atual. Não marque critério de função futura. Não use `VALIDADO` enquanto a pessoa não tiver testado a última função.
 
-Atualize `estado.md` para `AGUARDANDO_TESTE` e próximo papel `pessoa`. Devolva só o cartão. O resumo do handoff não é evidência para reviewer nem designer.
+Atualize `estado.md` para `AGUARDANDO_TESTE` e próximo papel `pessoa`. Em **Último cartão**, preencha **Alterado nesta rodada** com o que a pessoa deve notar no sistema na função atual (comportamento primeiro; caminho só se ajudar no teste). Devolva só o cartão de quatro linhas. O resumo do handoff não é evidência para reviewer nem designer.
