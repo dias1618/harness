@@ -28,7 +28,7 @@ O teste teria de falhar se a implementação estivesse errada. Sem teste de mét
 
 ## Alterado no estado
 
-Ao gravar `estado.md`, preencha **Alterado nesta rodada**: comportamentos que os testes novos ou alterados passam a cobrir na função atual.
+Preencha **Alterado nesta rodada** conforme [templates/estado.md](../templates/estado.md): comportamento que o teste exige; em RED, o que a produção ainda não faz — em 1 a 2 frases.
 
 ## O que tem de aparecer no artefato
 

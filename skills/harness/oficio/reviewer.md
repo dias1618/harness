@@ -17,7 +17,7 @@ Só crítico ou alto bloqueia. Médio e baixo são sugestão. Teste verde não a
 
 ## Alterado no estado
 
-Se gravar `estado.md`, preencha **Alterado nesta rodada** com o veredito e achados impeditivos em comportamento, não o diff.
+Se gravar `estado.md`, preencha **Alterado nesta rodada** conforme [templates/estado.md](../templates/estado.md): veredito e, se bloquear, o defeito observável em uma frase — não diff.
 
 ## O que tem de aparecer no artefato
 

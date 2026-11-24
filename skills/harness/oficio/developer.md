@@ -36,7 +36,7 @@ Prefira comandos **one-shot** na seção Validação (`test`, `build`, compilaç
 
 ## Alterado no estado
 
-Ao atualizar `estado.md`, preencha **Alterado nesta rodada** em **Último cartão**: 2 a 5 bullets do que a pessoa nota no sistema na função atual (comportamento primeiro). Não cole a lista de arquivos do handoff.
+Preencha **Alterado nesta rodada** em **Último cartão** conforme [templates/estado.md](../templates/estado.md): 1 a 3 frases, só o que você implementou ou corrigiu — endpoint/rota e campos, ou ação de tela; uma condição atípica só se for o ponto do teste. O handoff lista arquivos; este texto não.
 
 ## O que tem de aparecer no artefato
 

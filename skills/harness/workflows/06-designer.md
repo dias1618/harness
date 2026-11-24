@@ -30,4 +30,4 @@ Veredito no mesmo arquivo de contrato, seção Revisão: `APROVADO` ou `AJUSTE_V
 
 Antes do cartão: desbloqueie e feche a aba de automação do browser MCP que usou na revisão; não deixe browser lock aberto.
 
-Atualize **Último cartão** em `estado.md` com **Alterado nesta rodada** (contrato visual ou itens de revisão que mudaram). Devolva só o cartão de quatro linhas.
+Atualize **Alterado nesta rodada** conforme o [modelo](../templates/estado.md). Devolva só o cartão de quatro linhas.

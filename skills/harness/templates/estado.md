@@ -27,7 +27,7 @@ Nenhuma
 ou, até três, a mais bloqueante primeiro:
 
 - id: [curto]
-  prompt: [pergunta autocontida; o agente do chat também coloca isso no AskQuestion, depois de Alterado nesta rodada e Preciso de você, quando for o caso]
+  prompt: [pergunta autocontida; o agente do chat também coloca isso no AskQuestion, depois do resumo factual e de Preciso de você, quando for o caso]
   opcoes: [alternativas reais separadas por " | ", ou vazio]
   multipla: nao
 
@@ -39,7 +39,7 @@ ou, até três, a mais bloqueante primeiro:
 
 Feito:
 Alterado nesta rodada:
-- [comportamento ou efeito visível que mudou; caminho só se ajudar no teste]
+[1 a 3 frases factuais, só o que entrou nesta rodada: recurso, endpoint/rota, campos, tela ou artefato (REQ, IU, teste RED, contrato). Uma condição atípica só se for o ponto do teste (ex.: erro ao excluir se houver vínculo). Evite o que não mudou, happy path óbvio, motivação, tópicos, termos vagos; ~350 caracteres. Tom: "Criado o endpoint PUT /recursos/{id}; no body entram nome, tipo e ativo." | "A exclusão de recurso está disponível; retorna erro se estiver vinculado a outro." | "Registrada a regra de desconto no REQ-003; código de produto não foi alterado." | "Testes cobrem o cálculo de desconto; a produção ainda não implementa esse cálculo."]
 Preciso de você:
 Próximo:
 Resto:

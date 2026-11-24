@@ -26,7 +26,7 @@ Resto: [um caminho]
 
 `Preciso de você: nenhuma` não abre formulário e o ciclo segue. Pedido de status sem decisão pendente mostra só o cartão.
 
-Quando a parada espera resposta, o agente do chat abre o formulário AskQuestion no mesmo turno. Cada `prompt` é autocontido, nesta ordem: bloco **Alterado nesta rodada** (bullets de `estado.md` em **Último cartão**; se vazio, uma bullet derivada de `Feito:`); bloco **Preciso de você** (linha do cartão daquele turno e, em pergunta aberta, o texto do item); depois a pergunta e as opções. O detalhe das alterações fica só no formulário, não no texto do chat. Não repita só as opções na mensagem do chat; o cartão no chat continua com quatro linhas e `Último cartão` em `estado.md` inclui `Alterado nesta rodada`. Até três perguntas, a mais bloqueante primeiro, e só se forem independentes. Papel não abre formulário: grava a pergunta e `Alterado nesta rodada` no estado e devolve o cartão.
+Quando a parada espera resposta, o agente do chat abre o formulário AskQuestion no mesmo turno. Cada `prompt` é autocontido, nesta ordem: o texto de **Alterado nesta rodada** de `estado.md` (**Último cartão**), colado **sem rótulo** (1 a 3 frases factuais; se vazio, reescreva `Feito:` em 1–2 frases, sem inflar); linha **Preciso de você:** com a instrução do cartão (ou do item em Perguntas abertas); depois a pergunta e as opções. Ao gravar ou pedir o resumo: só o que entrou nesta rodada; evite o que não mudou, happy path óbvio, motivação, tópicos e termos vagos (~350 caracteres). O resumo fica só no formulário, não no chat. Não repita só as opções na mensagem do chat; o cartão no chat continua com quatro linhas. Até três perguntas, a mais bloqueante primeiro, e só se forem independentes. Papel não abre formulário: grava o resumo no campo **Alterado nesta rodada** e a pergunta no estado e devolve o cartão.
 
 ## Sessão
 
@@ -36,7 +36,7 @@ Com `APROVADO` na IU, o cartão fecha a unidade e o formulário oferece encerrar
 
 Vale com ou sem `#harness`. Uma vez por correção ou decisão de como trabalhar, depois de gravar fato de produto em `.cursor/requisitos/` quando for o caso. Não dispare para preencher requisito de tela, dado ou comportamento do app. Não repita se `estado.md` já registrou a resposta daquela decisão.
 
-Abra o formulário com o bloco **Alterado nesta rodada** (o que mudou neste turno) e em seguida a pergunta "Isto que você acabou de decidir pode virar artefato permanente?", sem numerá-las no chat:
+Abra o formulário com o resumo factual do turno (sem rótulo; 1 a 3 frases) e em seguida a pergunta "Isto que você acabou de decidir pode virar artefato permanente?", sem numerá-las no chat:
 
 - Rule só neste projeto — .cursor/rules/
 - Rule em todos os projetos — ~/.cursor/rules/

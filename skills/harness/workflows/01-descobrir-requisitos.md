@@ -14,7 +14,7 @@ Não leia o repositório inteiro.
 
 ## 2. Perguntar
 
-Se faltar ator, regra testável, exceção ou integração: grave até 3 perguntas em `.cursor/memoria/estado.md`, a mais bloqueante primeiro, no formato de Perguntas abertas do [modelo](../templates/estado.md). Grave `BLOQUEADO` e **Alterado nesta rodada** em **Último cartão** (artefatos tocados ou explícito que não houve mudança de código). Não invente alternativa de negócio. Sem alternativa real, deixe `opcoes` vazio. Não escreva as alternativas no cartão. O agente do chat abre o formulário.
+Se faltar ator, regra testável, exceção ou integração: grave até 3 perguntas em `.cursor/memoria/estado.md`, a mais bloqueante primeiro, no formato de Perguntas abertas do [modelo](../templates/estado.md). Grave `BLOQUEADO` e preencha **Alterado nesta rodada** no [modelo](../templates/estado.md). Não invente alternativa de negócio. Sem alternativa real, deixe `opcoes` vazio. Não escreva as alternativas no cartão. O agente do chat abre o formulário.
 
 Resposta no campo livre vira regra testável em `.cursor/requisitos/REQ-XXX.md` ([requisito.md](../templates/requisito.md)). `Ainda não sei — manter bloqueado` permanece `BLOQUEADO`. Não deixe a decisão só na análise.
 
@@ -34,4 +34,4 @@ Limite novo que valha para várias IUs vira ADR em `.cursor/decisoes/ADR/` ([dec
 
 ## 5. Devolução
 
-Atualize **Último cartão** em `estado.md` com **Alterado nesta rodada** (2 a 5 bullets: regras ou artefatos gravados neste turno em REQ, IU ou ADR; sem código de produto, diga isso). Devolva só o cartão de quatro linhas. O pai não recebe o corpo do REQ.
+Atualize **Último cartão** com **Alterado nesta rodada** conforme o [modelo](../templates/estado.md). Devolva só o cartão de quatro linhas. O pai não recebe o corpo do REQ.

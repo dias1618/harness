@@ -38,7 +38,7 @@ Também registre, quando couber:
 
 ## Alterado no estado
 
-Ao gravar **Último cartão** em `estado.md`, preencha **Alterado nesta rodada** com regras e artefatos que mudaram neste turno (REQ, IU, ADR). Sem código de produto, deixe explícito.
+Preencha **Alterado nesta rodada** conforme [templates/estado.md](../templates/estado.md): o que foi gravado ou decidido (REQ, IU, ADR); sem código de produto, uma frase explícita.
 
 ## O que tem de aparecer no artefato
 

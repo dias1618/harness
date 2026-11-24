@@ -20,7 +20,7 @@ Na revisão, olhe o render. Em app nativo, diga o que foi visto e o que não deu
 
 ## Alterado no estado
 
-Ao gravar **Último cartão**, preencha **Alterado nesta rodada** com mudanças do contrato ou da revisão visual que a pessoa deve conhecer.
+Preencha **Alterado nesta rodada** conforme [templates/estado.md](../templates/estado.md): o que mudou no contrato ou na revisão visual, em 1 a 2 frases de tela.
 
 ## O que tem de aparecer no artefato
 
